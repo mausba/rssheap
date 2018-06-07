@@ -1,0 +1,104 @@
+﻿@model TagsVM
+@{
+    ViewBag.Title = "Tags";
+    Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+
+    var request = Model.Request;
+}
+
+@section seo
+{
+    <title>Tags</title>
+}
+
+@section head
+{
+    <script src="/assets/js/tags.js"></script>
+}
+
+<div class="content clearfix">
+
+    <div class="left article-list-menu">
+
+        <div class="btn-out" role="button"><i class="fa fa-list"></i></div>
+
+        <div id="articles-menu" class="block clearfix">
+            <h2>Tags</h2>
+            <ul class="nav-vertical">
+                <li><a @(request.Popular ? "class=youarehere" : "") href="/tags"><i class="fa fa-thumbs-o-up"></i>Popular</a> @*<span class="badge bg-trsp">36</span>*@</li>
+                <li><a @(request.Name ? "class=youarehere" : "") href="/tags?tab=name"><i class="fa fa-sort-alpha-asc"></i>Name</a> @*<span class="badge bg-trsp">345</span>*@</li>
+                <li><a @(request.New ? "class=youarehere" : "") href="/tags?tab=new"><i class="fa fa-tags"></i>New</a> @*<span class="badge bg-trsp">12</span>*@</li>
+            </ul>
+        </div>
+
+        <div class="block tags-block clearfix">
+            <h2>Search tags</h2>
+            <div class="clearfix">
+                <form method="get">
+                    <input name="tag" id="search-for-tags" type="text" placeholder="Type to find tags" class="inpt-left" value="@Model.Request.SearchQuery">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tags-container right article-list">
+
+        <div class="tags-notification shaddow post-block clearfix">
+            <!-- title -->
+            <div class="title-box" style="width: 100%;">
+                <span id="title">What are you interested in?</span>
+                <a id="done" style="float: right; color: green;" href="/articles">Done</a>
+            </div>
+        </div>
+
+        @if (Model.Tags.Any())
+        {
+            <ul class="clearfix">
+                @foreach (var t in Model.Tags)
+                {
+                    var subscribed = Model.CurrentUser.FavoriteTagIds.Contains(t.Id);
+
+                    var desc = t.Description;
+                    if (desc.IsNullOrEmpty())
+                    {
+                        desc = "no description";
+                    }
+                    <li class="tag-item-container @(subscribed ? "tag-selected" : string.Empty)" data-name="@t.Name" style="cursor: pointer;">
+                        <div class="tag-container">
+                            <div class="tag-inner">
+                                <div class="tag-info clearfix">
+                                    <a class="tag-name">@t.Name</a>
+                                    <span title="@t.ArticlesCount articles" class="tag-count">@t.ArticlesCount</span>
+                                </div>
+                                <div class="tag-subscribers">
+                                    <span>@t.SubscribersCount subscribers</span>
+                                </div>
+                                <div class="tag-desc">
+                                    <p title="@Html.Raw(desc)">@Html.Raw(desc)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        }
+
+        @if (Model.ShowNextPage || Model.ShowPreviousPage)
+        {
+            <div class="post-block clearfix">
+                <div class="title-box clearfix">
+                    @if (Model.ShowPreviousPage)
+                    {
+                        <a id="prev-page" style="float: left;" href="@Html._GetPreviousPage(Model)"><b>Previous</b></a>
+                    }
+                    @if (Model.ShowNextPage)
+                    {
+                        <a id="next-page" style="float: right;" href="@Html._GetNextPage(Model)"><b>Next</b></a>
+                    }
+                </div>
+            </div>
+        }
+        <div class="overlay"></div>
+    </div>
+</div>

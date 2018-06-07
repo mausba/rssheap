@@ -1,0 +1,101 @@
+﻿@model AccountVM
+
+@{
+    var articles = Model.IgnoredArticles;
+}
+
+@if (articles.Count == 0)
+{
+    <p>There are no articles to show in this view</p>
+    return;
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var startWindowScroll;
+        $(".ajax-popup").magnificPopup({
+            type: 'ajax',
+            closeOnContentClick: false,
+            closeOnBgClick: true,
+            showCloseBtn: false,
+            alignTop: true,
+            callbacks: {
+                beforeOpen: function () {
+                    startWindowScroll = $(window).scrollTop();
+                },
+                close: function () {
+                    $(window).scrollTop(startWindowScroll);
+                }
+            }
+        });
+    });
+</script>
+
+<div class="ignored-articles">
+    @foreach (var article in articles)
+    {
+
+        <div class="article-post post-block clearfix">
+            <!-- vote-box -->
+            <div class="vote-box">
+                <div class="votes">
+                    <div class="number positive">@article.LikesCount.FormatCount()</div>
+                    <div class="attr">@(article.LikesCount == 1 ? "Vote" : "Votes")</div>
+                </div>
+                <div class="views">
+                    <div class="number">@article.ViewsCount.FormatCount()</div>
+                    <div class="attr">@(article.ViewsCount == 1 ? "View" : "Views")</div>
+                </div>
+                <div class="answ">
+
+                </div>
+            </div>
+
+            <!-- title -->
+            <div class="title-box">
+                <a id="@article.Id" class="article-title ajax-popup" 
+                    data-mfp-src="@article.PrettyUrl" href="/a/@article.ShortUrl">
+                    @Html.Raw(article.Name)
+                </a>
+
+                <div class="social">
+                    <span class="status">
+                        X
+                    </span>
+                </div>
+                <div style="clear: both"></div>
+
+                <span class="author author-mobile">@article.Published.TimeAgo() by 
+                    <a href="@article.Feed.PrettyUrl">
+                        @Html.Raw(article.Feed.Name)
+                        <img class="favicon favicon-feed" border="0" width="16" height="16" src="@article.Feed.Favicon" />
+                    </a>
+                </span>
+
+
+                <div style="clear: both"></div>
+                <!-- tags -->
+                <div class="tags clearfix">
+
+                    @foreach(var articleTag in article.Tags)
+                    {
+                        <a href="@articleTag.PrettyUrl" class="post-tag" rel="tag">@articleTag.Name</a>
+                    }
+
+                    <span class="author pull-right">
+
+                        @article.Published.TimeAgo() by 
+                    <a href="@article.Feed.PrettyUrl">
+                        @Html.Raw(article.Feed.Name)
+                        <img class="favicon favicon-feed" border="0" width="16" height="16" src="@article.Feed.Favicon" />
+                    </a>
+
+                    </span>
+                    <div style="clear: both"></div>
+                </div>
+
+            </div>
+
+        </div>
+    }
+</div>

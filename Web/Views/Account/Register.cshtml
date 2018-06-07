@@ -1,0 +1,119 @@
+﻿@model RegisterVM
+
+@{
+    ViewBag.Title = "Create an account";
+}
+
+@section seo
+{
+    <title>Create an account</title>
+}
+
+
+@Html.Script(
+    @<script type="text/javascript">
+        $(document).ready(function () {
+            $(".oauth ").click(function (e) {
+                var provider = $(this).data("provider");
+                if (provider && provider.length > 0) {
+                    e.preventDefault();
+
+                    $("#url").val(provider);
+                    $("#openid-form").submit();
+                }
+            });
+        });
+    </script>
+)
+
+<section id="content">
+
+    <div class="content-wrap nopadding">
+
+        <div class="section nopadding nomargin"
+             style="width: 100%; 
+             height: 100%; 
+             position: absolute; 
+             left: 0; 
+             top: 0;
+             background: url('/images/parallax/home/1.jpg') center center no-repeat; 
+             background-size: cover;
+             opacity: 0.2; filter: alpha(opacity=20);">
+        </div>
+
+        <div class="section nobg full-screen nopadding nomargin">
+            <div class="container vertical-middle divcenter clearfix">
+
+                <div class="row center">
+                    <a href="/"><img src="/images/logo.png"></a>
+                </div>
+
+                <div class="panel panel-default divcenter noradius noborder" style="max-width: 400px; background-color: rgba(255,255,255,0.93);">
+                    <div class="panel-body" style="padding: 40px;">
+
+                        <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+                            <h3>Register an Account</h3>
+
+                            @if (Model != null && !Model.ErrorMessage.IsNullOrEmpty())
+                            {
+                                <div class="col_full">
+                                    <label style="color: red;">@Model.ErrorMessage</label>
+                                </div>
+                            }
+
+                            <div class="col_full" style="margin-bottom: 10px;">
+                                @*<label for="login-form-username">Email:</label>*@
+                                <input required type="text" name="email" id="email" class="form-control not-dark" placeholder="Email *" value="@Request["email"]">
+                            </div>
+
+                            <div class="col_full" style="margin-bottom: 10px;">
+                                @*<label for="login-form-password">Password:</label>*@
+                                <input required type="password" name="password" id="password" class="form-control not-dark" placeholder="Password *">
+                            </div>
+
+                            <div class="col_full">
+                                @*<label for="login-form-password">Repeat Password:</label>*@
+                                <input required type="password" name="password2" id="password2" class="form-control not-dark" placeholder="Repeat password *">
+                            </div>
+
+                            <div class="col_full nobottommargin">
+                                <button style="width: 100%;" class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">Create an account</button>
+                            </div>
+                        </form>
+
+                        <div class="line line-sm"></div>
+
+                        <form id="openid-form" method="post" action="@Url.Action("OpenId", "Account")">
+                            <input type="hidden" name="url" id="url" />
+                            <input type="hidden" name="returnUrl" id="@Request["ReturnUrl"]" />
+
+                            <div class="center">
+                                <h4 style="margin-bottom: 15px;">or Sign Up using:</h4>
+                                <a href="#"
+                                   data-provider="facebook"
+                                   style="width: 100%;"
+                                   class="oauth button button-rounded si-facebook si-colored">Facebook</a>
+                                @*<span class="hidden-xs">or</span>*@
+                                <br />
+                                @*<a href="#"
+                                   data-provider="twitter"
+                                   style="width: 100%;"
+                                   class="oauth button button-rounded si-twitter si-colored">Twitter</a>
+                                <br />*@
+                                <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=https://www.rssheap.com/Account/AuthenticatedWithGoogle&response_type=code&client_id=438309243479-b5f56hl45rle2td3oclrgsvriboc8n7d.apps.googleusercontent.com&state=@Request["ReturnUrl"]"
+                                   style="width: 100%;"
+                                   class="button button-rounded si-googleplay si-colored">Google</a>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row center dark"><small>Copyrights &copy; All Rights Reserved by Canvas Inc.</small></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- #content end -->

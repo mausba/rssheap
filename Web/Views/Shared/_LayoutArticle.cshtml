@@ -1,0 +1,150 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    @RenderSection("seo", required: true)
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" media="all" href="/assets/css/footer.css" />
+    <link rel="stylesheet" media="all" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" media="all" href="/assets/css/fonts/fonts.css" />
+    <link rel="stylesheet" media="all" href="/assets/css/style_article.css?ver=3" />
+    <link rel="stylesheet" media="all" href="/assets/css/magnific-popup.css" />
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var token = $('input[name="__RequestVerificationToken"]').val();
+            $.ajaxPrefilter(function (options, originalOptions) {
+                if (options.type.toUpperCase() == "POST") {
+                    options.data = $.param($.extend(originalOptions.data, { __RequestVerificationToken: token }));
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    @RenderBody()
+
+    @Html.Partial("_Footer", new ViewDataDictionary { { "cssClass", "clearfix footer" } })
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-51717870-1', 'rssheap.com');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+
+    <script type='text/javascript'>
+
+        var _ues = {
+            host: 'rssheap.userecho.com',
+            forum: '1',
+            lang: 'en',
+            tab_corner_radius: 5,
+            tab_font_size: 20,
+            tab_image_hash: 'ZmVlZGJhY2s%3D',
+            tab_chat_hash: 'Y2hhdA%3D%3D',
+            tab_alignment: 'right',
+            tab_text_color: '#ffffff',
+            tab_text_shadow_color: '#00000055',
+            tab_bg_color: '#57a957',
+            tab_hover_color: '#f45c5c'
+        };
+
+        (function () {
+            var _ue = document.createElement('script'); _ue.type = 'text/javascript'; _ue.async = true;
+            _ue.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.userecho.com/js/widget-1.4.gz.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(_ue, s);
+        })();
+
+    </script>
+
+    <script type="text/javascript">
+        adroll_adv_id = "LDDOSTK5IVCUTLRPGOXG7C";
+        adroll_pix_id = "ETDOIHHRVZCYRFWYOLBWD5";
+        (function () {
+            var oldonload = window.onload;
+            window.onload = function () {
+                __adroll_loaded = true;
+                var scr = document.createElement("script");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                scr.setAttribute('async', 'true');
+                scr.type = "text/javascript";
+                scr.src = host + "/j/roundtrip.js";
+                ((document.getElementsByTagName('head') || [null])[0] ||
+                    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+                if (oldonload) { oldonload() }
+            };
+        }());
+    </script>
+
+    <div id="test-modal" class="mfp-hide white-popup">
+        <h3>Have a url?</h3>
+        <form class="clearfix" method="post" action="/article/import" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <input name="url"
+                   id="url-tb"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   type="text"
+                   placeholder="Enter the url of the website you want to add">
+
+            <div style="margin: 20px 0">
+                <h3>Or an OPML file? </h3>
+                <input name="file" type="file" accept=".opml" />
+            </div>
+
+            @*<div style="margin: 20px 0" class="clearfix">
+                    <label style="float: left;" for="subscribe">Subscribe to these feeds after import &nbsp;&nbsp;</label>
+                    <input style="float: left; width: 30px; margin-top: 5px;" type="checkbox" id="subscribe" name="subscribe" checked="checked" />
+                </div> *@
+            <input class="button" type="submit" value="IMPORT" />
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".submit-url").magnificPopup({
+                type: 'inline',
+                callbacks: {
+                    open: function () {
+                        $("#url-tb").focus();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Google Code for Visitors Conversion Page -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 997912516;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "b1Z9CJ22vWwQxN_r2wM";
+        var google_remarketing_only = false;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/997912516/?label=b1Z9CJ22vWwQxN_r2wM&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+
+
+</body>
+</html>

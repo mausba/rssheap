@@ -1,0 +1,252 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutEmails.cshtml";
+    var user = new UserService().GetUserByGuid(Request["guid"]);
+    if (user == null) { return; }
+    user.HideVisitedArticles = true;
+    var payments = new PaymentService().GetPayments(user.Id);
+    var isPro = new PaymentService().IsPro(user);
+
+    int pageSize = 30;
+
+    var FeedService = new FeedService();
+    var userTags = FeedService.GetTags(user.FavoriteTagIds);
+
+    var weekRequest = new ArticlesRequest
+    {
+        Week = true,
+        _PageSize = pageSize,
+        User = user
+    };
+    var weekArticles = FeedService.GetArticles(weekRequest);
+
+    ArticlesRequest monthRequest = null;
+    var monthArticles = new List<Article>();
+    if (weekArticles.Count < pageSize)
+    {
+        monthRequest = new ArticlesRequest
+        {
+            Month = true,
+            _PageSize = (pageSize - weekArticles.Count),
+            IgnoredArticleIds = weekArticles.Select(a => a.Id).ToList(),
+            User = user
+        };
+        monthArticles = FeedService.GetArticles(monthRequest);
+    }
+
+    ArticlesRequest allTimeRequest = null;
+    var allTimeArticles = new List<Article>();
+    if (weekArticles.Count + monthArticles.Count < pageSize)
+    {
+        var ignoredArticleIds = new List<int>();
+        ignoredArticleIds.AddRange(weekArticles.Select(a => a.Id));
+        ignoredArticleIds.AddRange(monthArticles.Select(a => a.Id));
+
+        allTimeRequest = new ArticlesRequest
+        {
+            Votes = true,
+            _PageSize = (pageSize - (monthArticles.Count + weekArticles.Count)),
+            IgnoredArticleIds = ignoredArticleIds,
+            User = user
+        };
+        allTimeArticles = FeedService.GetArticles(allTimeRequest);
+    }
+}
+
+@section seo
+{
+    <title>rssheap- weekly newsletter @DateTime.Now.ToString("D")</title>
+    <meta name="description" content="Top articles this week" />
+}
+
+@section beforeheader
+{
+    <table align="center" width="600" cellpadding="2" cellspacing="2" style="padding-bottom: 10px;">
+        <tbody>
+            <tr>
+                <td align="center" style="color: #999; font-size: 9px;"></td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+@section header
+{
+    <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important; background-color: #fff; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif;">
+        <tr>
+            <td style="padding: 0; margin: 0">
+                <p style="font-size: 13px; color: #333;">
+                    @if (userTags.Any())
+                    {
+                        <text>Hi <b>@user.UserName</b>, Here are some articles based on your preferences for tags &nbsp;</text>
+                        foreach (var tag in userTags)
+                        {
+                            @RenderTag(tag)
+                        }
+                    }
+                    else
+                    {
+                        <text>Hi <b>@user.UserName</b>, You have not set any of the prefered tags (You can do it by <a target="_blank" href="http://www.rssheap.com/login">loging in to the site</a> and picking some favorite tags on the left).
+                        <br />
+                        While you do that, here are some suggestions for you:</text>
+                    }
+                </p>
+
+                <p style="font-size: 13px; color: #333;">
+                    Also check out rssheap for <a target="_blank" href="https://itunes.apple.com/us/app/rssheap/id971849800?ls=1&mt=8">iOS</a> or <a target="_blank" href="https://play.google.com/store/apps/details?id=com.rssheap">Android</a> devices.
+                </p>
+
+                @if (!isPro && payments.Count == 0)
+                {
+                    <p style="font-size: 13px; color: #333;">
+                        Get the pro version for free. Find out more on this
+                        <a href="http://rssheap.com/home/pro">link</a>.
+                    </p>
+                }
+            </td>
+        </tr>
+    </table>
+}
+
+@section footer
+{
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;">
+        <tbody>
+            <tr>
+                <td align="left" valign="top">
+                    Can't view this email properly? <a style="color: #999;" href="http://www.rssheap.com/mail/articles?guid=@user.GUID" target="_blank">Click here for the online version</a>
+                    <br />
+                    Don't want to receive any more emails? <a href="http://www.rssheap.com/mail/unsubscribe?guid=@user.GUID" target="_blank" style="color: #0077CC;">Unsubscribe</a>.
+                    <br>
+                    Questions? Comments? We would love to hear from you, do let us know on our <a href="http://rssheap.userecho.com/" target="_blank" style="color: #0077CC;">feedback site</a>. .
+                    <br>
+                    rssheap © Copyright 2014
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+<table cellpadding="10" cellspacing="0" border="0" style="text-align: left;">
+    <tbody>
+        @if (weekArticles.Any())
+        {
+            <tr>
+                <td width="580" valign="top" style="padding-top: 0;">
+                    <h2 style="color: #222!important; font-size: 22px!important; line-height: 10px!important; font-weight: bold!important; padding-top: 15px!important; font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif; color: black !important;">
+                        <a target="_blank" style="text-decoration: none; color: #000;" href="http://www.rssheap.com/articles?tab=week">Top articles this week:</a>
+                    </h2>
+                </td>
+            </tr>
+
+            foreach (var article in weekArticles)
+            {
+                @RenderArticle(new MailVM
+                {
+                    Article = article,
+                    Request = weekRequest
+                })
+            }
+        }
+
+        @if (monthArticles.Any())
+        {
+            <tr>
+                <td width="580" valign="top" style="padding-top: 20px;">
+                    <h2 style="color: #222!important; font-size: 22px!important; line-height: 10px!important; font-weight: bold!important; padding:0; padding-top: 15px!important; font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif; color: black !important;">
+                        <a target="_blank" style="text-decoration: none; color: #000;" href="http://www.rssheap.com/articles?tab=month">Top articles this month:</a>
+                    </h2>
+                </td>
+            </tr>
+
+            foreach (var article in monthArticles)
+            {
+                @RenderArticle(new MailVM
+                {
+                    Article = article,
+                    Request = weekRequest
+                })
+            }
+
+            @if (allTimeArticles.Any())
+            {
+                <tr>
+                    <td width="580" valign="top" style="padding-top: 20px;">
+                        <h2 style="margin:0; color: #222!important; font-size: 22px!important; line-height: 10px!important; font-weight: bold!important; padding-top: 15px!important; font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif; color: black !important;">
+                            <a target="_blank" style="text-decoration: none; color: #000;" href="http://www.rssheap.com/articles">Top articles all time:</a>
+                        </h2>
+                    </td>
+                </tr>
+
+                foreach (var article in allTimeArticles)
+                {
+                    @RenderArticle(new MailVM
+                    {
+                        Article = article,
+                        Request = weekRequest
+                    })
+                }
+            }
+        }
+    </tbody>
+</table>
+
+@helper RenderArticle(MailVM mailVM)
+{
+    var article = mailVM.Article;
+    var request = mailVM.Request;
+
+    <tr>
+        <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dotted #ccc;">
+            <table width="580" cellpading="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <table cellpading="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="center">
+                                    <div style="margin: 0; padding: 0; padding-right: 15px; font-size: 24px; line-height: 24px; color: #6b9813;">
+                                        @article.LikesCount.FormatCount()
+                                    </div>
+                                    <div style="margin: 0; padding: 0; padding-right: 15px; color: #a5a4a4; font-size: 9px;">VOTES</div>
+                                </td>
+                                @*<td align="center">
+                                        <div style="margin: 0; padding: 0; margin-right: 10px; font-size: 24px; line-height: 24px; color: #6a6a6a;">
+                                            @article.ViewsCount.FormatCount()
+                                        </div>
+                                        <div style="margin: 0; padding: 0; margin-right: 15px; color: #a5a4a4; font-size: 9px;">VIEWS</div>
+                                    </td>*@
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <h3 style="margin: 0; padding: 10px 0; color: #000 !important; line-height: 1.3!important; font-size: 20px; font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif; font-weight: normal;">
+                            <a href="@Html.Raw("http://www.rssheap.com" + article.GetHref(request, request.User.GUID))" target="_blank" style="color: #000 !important; text-decoration: none; font-weight: normal;">@Html.Raw(article.Name)</a>
+                        </h3>
+                        <table width="580" cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="left" valign="top">
+                                        @foreach (var tag in article.Tags.Take(5))
+                                        {
+                                            @RenderTag(tag)
+                                        }
+                                    </td>
+                                    <td align="right" style="font-size: 11px; color: #adadab;">
+                                        published by <a href="@Html.Raw("http://www.rssheap.com"+ article.Feed.PrettyUrl)" target="_blank" style="color: #adadab; font-size: 9px;">@Html.Raw(article.Feed.Name)</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+}
+
+@helper RenderTag(Tag tag)
+{
+    <a href="@Html.Raw("http://www.rssheap.com" + tag.PrettyUrl)" target="_blank"
+       style="display: inline-block; white-space: nowrap; overflow: visible; font-size: 12px; padding: 4px 10px; background: #f9f9f9; color: #717276; box-shadow: 0 0 1px #aaa; -moz-box-shadow: 0 0 1px #aaa; -webkit-box-shadow: 0 0 1px #aaa; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; text-decoration: none; position: relative;">
+        @tag.Name
+    </a>
+}

@@ -1,0 +1,50 @@
+﻿body
+{
+    background: none !important;
+}
+
+.article
+{
+    font-size: 19px !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+    .article .article-content .ctn
+    {
+        padding: 5px 10px !important;
+    }
+
+.article .post-text,
+.article .post-text *
+{
+    font-size: 17px !important;
+}
+
+.article .mobile-title
+{
+    margin-top: 20px !important;
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+}
+
+.article .mobile-published-by
+{
+    font-size: 13px !important;
+    color: #717276 !important;
+    margin-top: 15px !important;
+    margin-bottom: 30px !important;
+}
+
+.article .post-text h2
+{
+    font-size: 130% !important;
+}
+
+.article .post-text h3
+{
+    font-size: 110% !important;
+}

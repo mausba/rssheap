@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2FE158A-477A-4DFA-BB5C-63255520DECD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4114.6375, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DKIM.Net, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\DKIM.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\packages\StackExchange.Redis.1.0.481\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\CacheClient.cs" />
+    <Compile Include="Caching\CachePeriod.cs" />
+    <Compile Include="Caching\Clients\InMemoryCache.cs" />
+    <Compile Include="Caching\Clients\JsonFileCache.cs" />
+    <Compile Include="Caching\Redis.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Data\DataConverter.cs" />
+    <Compile Include="Data\DataProvider.cs" />
+    <Compile Include="Enums\ArticleActions.cs" />
+    <Compile Include="Enums\LoginProvider.cs" />
+    <Compile Include="Extensions\ActionExtensions.cs" />
+    <Compile Include="Extensions\ArticleExtensions.cs" />
+    <Compile Include="Extensions\DataRowExtensions.cs" />
+    <Compile Include="Extensions\DataSetExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\MoreLikeThis.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\WebClientExtensions.cs" />
+    <Compile Include="Extensions\XmlReaderExtensions.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Models\ArticleTag.cs" />
+    <Compile Include="Models\Folder.cs" />
+    <Compile Include="Models\Metadata.cs" />
+    <Compile Include="Models\OPML.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Requests\ArticlesRequest.cs" />
+    <Compile Include="Models\Requests\TagsRequest.cs" />
+    <Compile Include="Models\Responses\TagResponse.cs" />
+    <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\UserFeed.cs" />
+    <Compile Include="Models\UserTaggedArticle.cs" />
+    <Compile Include="Models\Vote.cs" />
+    <Compile Include="Models\FavoriteArticle.cs" />
+    <Compile Include="Parsers\CategoryParser.cs" />
+    <Compile Include="Parsers\FeedParser.cs" />
+    <Compile Include="Models\Feed.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FeedService.cs" />
+    <Compile Include="Services\ImportService.cs" />
+    <Compile Include="Services\LogService.cs" />
+    <Compile Include="Services\LuceneSearch.cs" />
+    <Compile Include="Services\PaymentService.cs" />
+    <Compile Include="Services\SelectBuilders\ArticlesSelectBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\FavoritesBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\FeedBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\FolderSelectBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\MyFeedsSelectBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\PublishedAfterBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\SortedByVotesBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\TagBuilder.cs" />
+    <Compile Include="Services\SelectBuilders\UntagedBuilder.cs" />
+    <Compile Include="Services\SessionService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Utilities\MyXmlReader.cs" />
+    <Compile Include="Utilities\Social\Facebook.cs" />
+    <Compile Include="Utilities\Social\Google.cs" />
+    <Compile Include="Utilities\IISTaskManager.cs" />
+    <Compile Include="Utilities\Social\LinkedIn.cs" />
+    <Compile Include="Utilities\Mail\Mail.cs" />
+    <Compile Include="Utilities\Social\Reddit.cs" />
+    <Compile Include="Utilities\Rss10FeedFormatter.cs" />
+    <Compile Include="Utilities\Social\Twitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Readme.txt" />
+    <Content Include="Dependencies\Argotic 3.5\Argotic.Common.dll" />
+    <Content Include="Dependencies\Argotic 3.5\Argotic.Core.dll" />
+    <Content Include="Dependencies\Argotic 3.5\Argotic.Extensions.dll" />
+    <Content Include="Dependencies\Argotic 3.5\Argotic.Web.dll" />
+    <Content Include="Dependencies\BouncyCastle.Crypto.dll" />
+    <Content Include="Dependencies\DKIM.Net.dll" />
+    <Content Include="Dependencies\MySql.Data.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dependencies\DKIM.Net-master.zip" />
+    <None Include="packages.config" />
+    <None Include="Utilities\Mail\rsa.private" />
+    <None Include="Utilities\Mail\rsa.public" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

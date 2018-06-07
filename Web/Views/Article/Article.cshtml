@@ -1,0 +1,168 @@
+﻿@using System.Web.Script.Serialization;
+
+@model ArticleVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutArticle.cshtml";
+
+    var user = (ViewContext.Controller as MvcWeb.Controllers._BaseController).CurrentUser;
+    var isPro = new PaymentService().IsProCached(CachePeriod.ForHours(6), user);
+
+    var article = Model.Article;
+    var voteUpClass = article.MyVotes > 0 ? "vote-up-on" : "vote-up-off";
+    var voteDownClass = article.MyVotes < 0 ? "vote-down-on" : "vote-down-off";
+    var subscribed = Model.User.FavoriteFeedIds.Any(f => f == article.Feed.Id);
+    var flagged = article.FlaggedBy.Contains(Model.User.Id);
+}
+
+@section seo
+{
+    <title>@Model.Article.Name</title>
+    <meta name="description" content="@Model.Article.Body.StripHtml().Shorten(250)" />
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.post("/Article/IncreaseViewsCount", { articleId: @Model.Article.Id, userId: @Model.User.Id }, function (result) { });
+        $.post("/Article/CheckIfUrlIsOk", { articleId: @Model.Article.Id }, function (result) {
+            if(!result) {
+                var next = $(".next").attr("href");
+                document.location = next;
+            }
+        });
+    });
+</script>
+
+<script src="/assets/js/article.js"></script>
+
+@Html.AntiForgeryToken()
+<div class="top-header">
+    <div class="top-header-content">
+        <div class="box">
+            <div id="logo" class="logo">
+                <a href="/">
+                    <img src="/assets/css/img/logo.png" />
+                </a>
+            </div>
+            <div class="links right-links">
+                <a href="/home/about">About Me</a>
+                <a class="submit-url" href="#test-modal"><i class="fa fa-globe"></i>Have a URL?</a>
+                <a id="all-tags" href="/tags"><i class="fa fa-tags"></i>Tags</a>
+            </div>
+        </div>
+        <div class="box al-center">
+            <i class="vote vote-down fa fa-thumbs-down @voteDownClass" data-articleid="@article.Id"></i>
+            <a class="next" href="@article.GetHrefForNext(Model.Query)">Next</a>
+            <i class="vote vote-up fa fa-thumbs-up @voteUpClass" data-articleid="@article.Id"></i>
+        </div>
+        <div class="box al-right">
+            <div class="links">
+                @if (user != null)
+                {
+                    <span class="user-info" title="@user.UserName" style="font-size: 12px;">
+                        Hi, @user.UserName.Shorten(30) @(isPro ? "(PRO)" : string.Empty)
+                    </span>
+                    <a style="margin-right: 0; padding-right: 0; border: none;" href="/account/logoff">Logoff</a>
+
+                    if (!isPro)
+                    {
+                        <a style="margin-right: 0; padding-right: 0; border: none;" href="/home/pro">Upgrade</a>
+                    }
+                }
+                else
+                {
+                    <a style="margin-right: 0; padding-right: 0; border: none;" href="/articles">Login</a>
+                }
+            </div>
+            <div class="sm-top-links">
+                <div class="link-dropdown">
+                    <div class="icon"><i class="fa fa-link"></i></div>
+                    <div class="dropdown-toggle">
+                        <a href="/home/about">About Me</a><br />
+                        <br />
+                        <a class="submit-url" href="#test-modal">Have a URL?</a>
+                    </div>
+                </div>
+                <div class="link-dropdown">
+                    <div class="icon"><a href="/tags"><i class="fa fa-tags"></i></a></div>
+                </div>
+                <div class="link-dropdown">
+                    <div class="icon">
+                        <a href="/account/logoff"><i class="fa fa-sign-out"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-header">
+    <div class="bottom-header-content">
+        <span class="title">@Html.Raw(article.Name) (@article.LikesCount.FormatCount() likes)</span>
+        <a class="link" href="/a/@article.ShortUrl" target="_blank">website</a>
+
+        @if (!article.ShortUrl.IsNullOrEmpty())
+        {
+            var url = "http://rssheap.com/a/" + article.ShortUrl;
+            var twitterTitle = article.Name;
+            if (twitterTitle.Length > 100)
+            {
+                twitterTitle = twitterTitle.Substring(0, 100) + "...";
+            }
+            twitterTitle += " " + url + " via @rssheap ";
+            twitterTitle = HttpUtility.UrlEncode(twitterTitle);
+
+
+            <ul class="article-socials clearfix">
+                <li>
+                    <a title="Facebook" href="http://www.facebook.com/sharer/sharer.php?u=@url" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Twitter" href="https://twitter.com/intent/tweet?text=@twitterTitle" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Google+" href="https://plus.google.com/share?url=@url" target="_blank">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=@url&amp;title=@HttpUtility.UrlEncode(article.Name)" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Gmail" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to&su=@(article.Name)+%5Brssheap%5D&body=@(article.Name)%0A%0A@(url)%0A%0A--%0A+via+http://www.rssheap.com" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Pocket" href="http://getpocket.com/edit?url=@url&title=@HttpUtility.UrlEncode(article.Name)" target="_blank">
+                        <i class="fa fa-get-pocket"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="article-socials clearfix">
+                <li>
+                    <a class="star @(article.IsMyFavorite ? "star-on" : string.Empty)" title="Add to favorites" href="#" data-articleid="@article.Id">
+                        <i class="fa fa-star"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="subscribetofeed @(subscribed ? "subscribed" : string.Empty)" data-feedid="@article.Feed.Id" title="Add the entire feed to my feeds" href="#">
+                        <i class="fa fa-rss"></i>
+                    </a>
+                </li>
+                <li>
+                    <a data-articleid="@article.Id" class="flag @(flagged ? "flagged" : string.Empty)" href="#" title="flag the article as not related to software development">
+                        <i class="fa fa-flag"></i>
+                    </a>
+                </li>
+            </ul>
+        }
+    </div>
+</div>
+
+<iframe class="rssheap-frame" src="@article.Url"></iframe>

@@ -1,0 +1,245 @@
+/* MEDIA QUERIES 
+/////////////////////////////////
+*/
+@media (max-width: 1199px) {
+
+	.head-logo {
+	    margin-left: 15px;
+	}
+
+	.login-btn-wrapper {
+	    margin-right: 15px;
+	}
+
+	.footer-logo {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	    padding-left: 15px;
+	}
+
+	.social-links {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	    padding-right: 15px;
+	}
+}
+
+/* Minimal width 768px - Tablets Portrait */
+@media (max-width: 991px) {
+    .footer-content {
+        width: auto;
+    }
+        .contact-email p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+/* Minimal width 320px - Mobile Phone screens */
+@media (max-width: 767px) {
+
+	body {
+	    padding-top: 60px;
+	}
+	header {
+	    height: 60px;
+	}
+
+	.head-logo {
+	    margin-left: 10px;
+	    max-width: 120px;
+	    margin-top: 10px;
+	}
+	.head-logo img{
+		width: 100%;
+		height: auto;
+	}
+	.login-btn-wrapper {
+	    margin-right: 10px;
+	    margin-top: 10px;
+	}
+	.head-btn {
+	    margin-left: 10px;
+	    padding: 10px;
+	    width: 70px;
+	}
+	.popup-box {
+	    max-width: 320px;
+	    padding: 10px 10px 20px;
+	}
+	.popup-box h3 {
+	    margin: 5px 0;
+	}
+	.social-login a.cl-login, .social-login button.cl-login {
+	    margin-top: 15px;
+	}
+	.infoBlock {
+    	bottom: 5%;
+	}
+	.infoBlock h2 {
+	    font-size: 18px;
+	    margin-bottom: 10px;
+	}
+	.infoBlock p {
+	    font-size: 12px;
+	}
+	.rsMinW .rsPlayBtn {
+	    cursor: pointer;
+	    height: 62px;
+	    margin-left: -31px;
+	    margin-top: -31px;
+	    width: 62px;
+	}
+	.rsMinW .rsPlayBtnIcon {
+	    height: 62px;
+	    width: 62px;
+	    background-size: 30%;
+	    background-position: 24px center;
+	}
+
+	.content-section {
+	    padding: 15px 10px;
+	}
+	.section-title-text {
+	    padding: 0 10px;
+	}	
+	.section-title-text h2 {
+	    font-size: 24px;
+	    margin-bottom: 5px;
+	}
+	.section-title-text p {
+	    font-size: 16px;
+	    line-height: 20px;
+	}
+	.front-boxes {
+	    margin-top: 20px;
+	}
+	.front-boxes ul li {
+	    border-left: none;
+	    width: 100%;
+	    margin-bottom: 20px;
+	}
+	.box-img {
+	    padding: 10px 20px;
+	}
+	.front-img-box p {
+	    font-size: 14px;
+	    height: auto;
+	    line-height: 22px;
+	    padding: 0 10px;
+	    margin-bottom: 10px;
+	}
+	.section-content-text {
+	    padding: 20px 2%;
+	}
+	.section-content-image {
+	    margin: 15px 0;
+	    padding: 0 1%;
+	}
+	footer{text-align: center;}
+	.footer-logo {
+	    float: none;
+	    width: 100%;
+	    text-align: center;
+	}
+	.footer-menu {
+	    float: none;
+	    padding: 10px 0;
+	    text-align: center;
+	    width: 100%;
+	}
+	.social-links {
+	    float: none;
+	    margin-top: 10px;
+	    text-align: center;
+	    width: 100%;
+	}
+
+	.social-links a {
+	    display: inline-block;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	}
+
+	.page-image {
+	    height: 120px;
+	    overflow: hidden;
+	    width: 100%;
+	}
+
+	.page-image img {
+	    display: block;
+	    height: 120px;
+	    width: auto;
+	}
+
+	.form-field.half-field {
+	    margin-bottom: 10px;
+	    width: 100%;
+	}
+
+	.form-field.half-field label {
+	    width: 100%;
+	}
+
+	.form-field.half-field input {
+	    width: 100%;
+	}
+	.form-field label.half-label {
+	    text-align: left;
+	}
+	.form-field label{
+		line-height: 24px;
+		width: 100%;
+	}
+
+	.form-field {
+	    margin-bottom: 10px;
+	    width: 100%;
+	}
+
+	.form-field input[type="text"],
+	.form-field input[type="password"],
+	.form-field textarea{
+		width: 100%;
+	}
+    .footer-content {
+        width: auto;
+    }
+
+    .contact-email p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .rsOverflow .rsContent .container p
+    {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:480px), (max-width:600px)
+{
+    header
+    {
+        position: relative;
+    }
+
+    body
+    {
+        padding-top: 0;
+    }
+
+    .head-btn
+    {
+        margin-left: 5px;
+    }
+
+    .ue-tab-container {
+        display: none;
+    }
+}

@@ -1,0 +1,388 @@
+﻿@{
+    var user = (ViewContext.Controller as MvcWeb.Controllers._BaseController).CurrentUser;
+}
+
+@section seo
+{
+    @if (Configuration.IsArtWebsite())
+    {
+        <title>RSS Reader for Artists</title>
+        <meta name="description" content="Advanced web and mobile based RSS reader for artrists. Subscribe to tags you are interested in (3d,photography,animation,...) and read high quality content" />
+    }
+    else
+    {
+        <title>RSS Reader for Software Developers</title>
+        <meta name="description" content="An advanced web and mobile based RSS reader for software developers. Subscribe to tags you are interested in (c#,java,ruby,...) and read high quality content" />
+    }
+}
+
+@section head
+{
+
+}
+<section id="slider"
+         class="slider-parallax"
+         style="background: url('images/landing/front.jpg') no-repeat;
+                        background-size: cover"
+         data-height-lg="600"
+         data-height-md="500"
+         data-height-sm="0"
+         data-height-xs="0"
+         data-height-xxs="0">
+
+    <div class="slider-parallax-inner">
+
+        <div class="container clearfix">
+            <div class="vertical-middle dark center">
+
+                <div style="text-align: right !important;" class="nobottommargin topmargin">
+                    <h1 style="text-shadow: 2px 2px #74c5c8; color: white; font-size: 45px; margin-bottom: 0px; color: beige;">
+                        <span class="text-rotater nocolor">
+                            Welcome to rssheap
+                        </span>
+                    </h1>
+                    <small style="color: white; font-style: italic; font-size: 30px; text-shadow: 1px 1px #74c5c8;">
+                        an advanced web and mobile based RSS reader <br /> for Software Developers
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mobile-content"
+         class="nobottommargin notopmargin"
+         data-height-lg="0"
+         data-height-md="0">
+
+    <div class="content-wrap" style="padding: 20px 0;">
+
+        <div class="container clearfix">
+
+            <div class="divcenter center clearfix" style="max-width: 900px;">
+                <h1>Welcome to <span>rssheap</span></h1>
+                <h2>an advanced web and mobile based RSS reader for Software Developers</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slider-mobile-image slider-parallax"
+         style="background: url('/images/parallax/home/4.jpg') no-repeat;
+                background-size: cover"
+         data-height-lg="0"
+         data-height-md="0"
+         data-height-sm="300"
+         data-height-xs="200"
+         data-height-xxs="100"></section>
+
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap" style="padding-bottom: 0;">
+
+        <div class="fancy-title title-border title-center">
+            <h1>Popular Tags</h1>
+        </div>
+
+        <ul class="clients-grid grid-6 divcenter center bottommargin-lg clearfix" style="max-width: 900px;">
+            <li><a><br />javascript</a></li>
+            <li><a><br />css</a></li>
+            <li><a><br />php</a></li>
+            <li><a><br />jquery</a></li>
+            <li><a><br />angularjs</a></li>
+            <li><a><br />nodejs</a></li>
+            <li><a><br />c#</a></li>
+            <li><a><br />sass</a></li>
+            <li><a><br />java</a></li>
+            <li><a><br />html5</a></li>
+            <li><a><br />wordpress</a></li>
+            <li><a><br />.net</a></li>
+            <li><a><br />pyton</a></li>
+            <li><a><br />ruby</a></li>
+            <li><a><br />android</a></li>
+            <li><a><br />ruby-on-rails</a></li>
+            <li><a><br />ios</a></li>
+            <li><a><br />mysql</a></li>
+            <li style="clear: both;"></li>
+        </ul>
+
+        <div style="clear: both;"></div>
+
+        <a style="cursor: inherit;" class="button button-full button-dark center tright header-stick notopmargin">
+            <div class="container clearfix">
+                We have the most comprehensive database of software development articles from all over the Internet!
+            </div>
+        </a>
+
+
+        <div class="section dark notopmargin nobottommargin noborder" style="padding: 60px 0;background-color: #222;">
+            <div class="container-fluid clearfix">
+
+                <div class="col_one_fifth nobottommargin center">
+                    <div class="counter counter-large" style="color: #3498db;">
+                        13k+
+                    </div>
+                    <h5>Feeds</h5>
+                </div>
+
+                <div class="col_one_fifth nobottommargin center bounceIn animated" data-animate="bounceIn" data-delay="200">
+                    <div class="counter counter-large" style="color: #e74c3c;">
+                        6.9M+
+                    </div>
+                    <h5>Articles</h5>
+                </div>
+
+                <div class="col_one_fifth nobottommargin center bounceIn animated" data-animate="bounceIn" data-delay="400">
+                    <div class="counter counter-large" style="color: #1abc9c;">
+                        100+
+                    </div>
+                    <h5>Tags</h5>
+                </div>
+
+                <div class="col_one_fifth nobottommargin center bounceIn animated" data-animate="bounceIn" data-delay="600">
+                    <div class="counter counter-large" style="color: #e67e22;">
+                        <span data-from="2" data-to="250" data-refresh-interval="30" data-speed="3000">178</span>
+                    </div>
+                    <h5>New articles every day</h5>
+                </div>
+
+                <div class="col_one_fifth nobottommargin center col_last bounceIn animated" data-animate="bounceIn" data-delay="800">
+                    <div class="counter counter-large" style="color: #9b59b6;"><span data-from="0" data-to="20" data-refresh-interval="30" data-speed="2700">469</span></div>
+                    <h5>New articles every hour</h5>
+                </div>
+
+            </div>
+        </div>
+
+        @{
+            var weekArticles = CacheClient.InMemoryCache.GetOrAdd("thisweekarticles", CachePeriod.ForHours(6),
+            () => new FeedService().GetArticles(new ArticlesRequest
+            {
+                Week = true,
+                User = user ?? new User { },
+                Page = 0,
+                PageSize = 12
+            }));
+        }
+
+        <div class="section notopmargin notopborder" style="margin-bottom: 0;">
+            <div class="container clearfix">
+                <div class="heading-block center nomargin">
+                    <h1>Popular articles this week</h1>
+                </div>
+            </div>
+            <div class="container clear-bottommargin clearfix" style="margin-top: 60px;">
+                <div class="row">
+
+                    @foreach (var article in weekArticles)
+                    {
+                        <div class="col-md-3 col-sm-6 bottommargin">
+                            <div class="ipost clearfix">
+                                <div class="entry-title">
+                                    <h3>
+                                        <a target="_blank"
+                                           title="@article.Name"
+                                           href="/a/@article.ShortUrl">
+                                            @article.Name
+                                        </a>
+                                    </h3>
+                                </div>
+                                <ul class="entry-meta clearfix" style="overflow: hidden;">
+                                    @*
+                                        <li><i class="icon-calendar3"></i> 13th Jun 2014</li>*@
+                                    <li>
+                                        <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;">
+                                            <a><i class="icon-thumbs-up"></i> @article.LikesCount</a>
+                                            <a>
+                                                @@
+                                                @string.Join(",", article.Tags.Take(3).Select(t => " " + t.Name))
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <div class="col_full bottommargin-lg common-height">
+
+            <div class="col-md-4 dark col-padding ohidden" style="background-color: rgb(26, 188, 156); height: 330px;">
+                <div>
+                    <h3 class="uppercase" style="font-weight: 600;">What is it about?</h3>
+                    <p style="line-height: 1.8; margin: 0;">
+                        When you create an account we give you a list of all the available tags in the system to choose from (for example: css, php, c#, java, ruby...)
+                    </p>
+                    <p>
+                        System then uses that information to offer you high quality, relevant only articles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 dark col-padding ohidden" style="background-color: rgb(52, 73, 94); height: 330px;">
+                <div>
+                    <h3 class="uppercase" style="font-weight: 600;">Our Mission</h3>
+                    <p style="line-height: 1.8; margin: 0;">
+                        Our mission is to put all the resources for software developers in a single place where they will be easily accessible to everyone.
+                    </p>
+                    <p>
+                        No need to search for great articles online anymore.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 dark col-padding ohidden" style="background-color: rgb(231, 76, 60); height: 330px;">
+                <div>
+                    <h3 class="uppercase" style="font-weight: 600;">What you get</h3>
+                    <p style="line-height: 1.8;">
+                        An ability to find great articles instantly, stay up to date and improve your technical knowledge - for free - how cool is that?!
+                    </p>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="clear"></div>
+
+        <div class="container clearfix topmargin nobottommargin">
+
+            <div class="heading-block center">
+                <h3>it is also available for mobile devices</h3>
+                <span>We have made our App available for Android and iOS</span>
+            </div>
+
+            <p class="divcenter center" style="max-width: 800px;">
+                Download the app and browse faster
+            </p>
+
+            <div class="col_full center topmargin nobottommargin">
+
+                <a target="_blank" href="https://itunes.apple.com/us/app/rssheap/id971849800?ls=1&mt=8" class="social-icon si-appstore si-large si-rounded si-colored inline-block" title="iOS App Store">
+                    <i class="icon-appstore"></i>
+                    <i class="icon-appstore"></i>
+                </a>
+
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.rssheap" class="social-icon si-android si-large si-rounded si-colored inline-block" title="Android Store">
+                    <i class="icon-android"></i>
+                    <i class="icon-android"></i>
+                </a>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="divider divider-short divider-vshort divider-line divider-center">&nbsp;</div>
+
+        </div>
+
+        <div class="section dark nobottommargin">
+
+            <div class="container clearfix">
+
+                <div id="section-buy" class="heading-block title-center nobottomborder page-section">
+                    <h2>Improve your skills one article at a time</h2>
+                    <span>Give it a go and you won't regret it!</span>
+                </div>
+
+                <div class="center">
+
+                    <a href="/login" data-animate="tada" class="button button-3d button-teal button-xlarge nobottommargin tada animated">Login</a>
+                    - OR -
+                    <a href="/register" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin">Sign Up</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="contact-form" class="section notopmargin nobottommargin" style="padding-bottom: 0;">
+            <div class="container clearfix">
+
+                @{
+                    var message = ViewBag.Message;
+                }
+
+                @if (string.IsNullOrEmpty(message))
+                {
+                    <div class="heading-block title-center topmargin page-section">
+                        <h2>Have a question?</h2>
+                        <span>Do you like the site, have a feature request, remark, or something you would like to change? Drop us a message about absolutely anything and we will get back to you within 24 hours.</span>
+                    </div>
+
+                    <style type="text/css">
+                        .surname {
+                            display: none;
+                        }
+                    </style>
+
+                    <form method="post"
+                          class="bottommargin-lg divcenter"
+                          style="max-width: 500px;">
+
+                        <input type="hidden" name="SpamProtectionTimeStamp" value="@((long)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds)" />
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-process"></div>
+
+                        <div class="col_full">
+                            <input type="text" id="name" name="name" required class="form-control required input-lg" placeholder="Your Name" aria-required="true">
+                        </div>
+
+                        <div class="surname col_full">
+                            <input type="text" id="surname" name="surname">
+                        </div>
+
+                        <div class="col_full">
+                            <input type="text" id="email" name="email" required class="form-control required email input-lg" placeholder="Your E-mail Address" aria-required="true">
+                        </div>
+
+                        <div class="col_full">
+                            <textarea name="body"
+                                      required
+                                      class="form-control required input-lg"
+                                      aria-required="true"
+                                      placeholder="Your Message"
+                                      rows="6"></textarea>
+                        </div>
+
+                        <div class="col_full nobottommargin">
+                            <button type="submit" name="wedding-rsvp-submit" id="wedding-rsvp-submit" class="button button-3d btn-block nomargin button-dark button-xlarge" value="submit">Submit</button>
+                        </div>
+
+                    </form>
+                }
+                else
+                {
+                    @Html.Script(
+                        @<script type="text/javascript">
+                                $(function () {
+                                    var contactForm = $("#contact-form").get(0);
+                                    contactForm.scrollIntoView(true);
+                                });
+                        </script>
+                    )
+                    <div class="heading-block title-center topmargin page-section bounceIn animated">
+                        <h2></h2>
+                        <span>@message</span>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="clear"></div>
+
+</section>

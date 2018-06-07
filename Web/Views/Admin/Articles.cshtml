@@ -1,0 +1,16 @@
+﻿@model Article
+
+@{
+    ViewBag.Title = "Articles";
+    Layout = null;
+}
+
+@if (Model.Id == 0)
+{
+    <h2>No more articles to review</h2>   
+   
+    return;
+}
+@Model.Id
+
+<iframe width="1400" height="900" src="@Model.PrettyUrl"></iframe>

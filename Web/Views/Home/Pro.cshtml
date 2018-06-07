@@ -1,0 +1,239 @@
+﻿@{
+    ViewBag.Title = "Pro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = (ViewContext.Controller as MvcWeb.Controllers._BaseController).CurrentUser;
+
+    var PaymentService = new PaymentService();
+    var userPayments = user != null
+        ? PaymentService.GetPayments(user.Id)
+        : new List<Payment>();
+
+    if (PaymentService.IsPro(user))
+    {
+        Response.Redirect("/", true);
+        return;
+    }
+
+    var price = (decimal)9.99;
+    if (user != null && user.SharedOnTwitter && userPayments.Count == 0) { price -= 5; }
+    if (user != null && user.SharedOnFacebook && userPayments.Count == 0) { price -= 5; }
+
+    var freePro = false;
+
+    if (user != null && user.SharedOnFacebook && user.SharedOnTwitter && userPayments.Count == 0)
+    {
+        var payment = new Payment();
+        payment.Amount = 0;
+        payment.Date = DateTime.Now;
+        payment.Email = user.Email;
+        payment.OrderType = "year";
+        payment.TransactionId = "shares";
+        payment.UserId = user.Id;
+        payment.IsNew = true;
+        payment.FormValues = string.Empty;
+
+        PaymentService.InsertPayment(payment);
+        PaymentService.ClearCachedInfo(user);
+
+        freePro = true;
+
+        Core.Extensions.ActionExtensions.TryAction(() =>
+        {
+            Core.Utilities.Mail.SendMeAnEmail("New payment on the site", "woohoo");
+        });
+    }
+}
+
+@section seo
+{
+    <title>Become a PRO</title>
+}
+
+@section head
+{
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+    @if (user != null)
+    {
+        @Html.Script(
+            @<script type="text/javascript">
+                twttr.ready(function (twttr) {
+                    twttr.events.bind('tweet', function (event) {
+                        if (event.type = "tweet") {
+                            $.post("/json/tweet", { guid: '@user.GUID.ToString()' }, function (response) {
+                                window.location = window.location;
+                            });
+                        }
+                    });
+                });
+            </script>
+        );
+
+        @Html.Script(
+            @<script type="text/javascript">
+                twttr.ready(function (twttr) {
+                    // bind to the tweet event
+                    twttr.events.bind('tweet', function (event) {
+                        if (event.type = "tweet") {
+                            $.post("/json/tweet", { guid: '@user.GUID.ToString()' }, function (response) {
+                                window.location = window.location;
+                            });
+                        }
+                    });
+                });
+            </script>
+        );
+
+        @Html.Script(
+            @<script>
+                window.fbAsyncInit = function () {
+                    FB.init({
+                        appId: '685201244886528',
+                        xfbml: true,
+                        version: 'v2.0'
+                    });
+                };
+
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) { return; }
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+        );
+
+        @Html.Script(
+            @<script type="text/javascript">
+                $(document).ready(function () {
+                    $("#facebook").click(function (e) {
+                        e.preventDefault();
+
+                        FB.ui(
+                        {
+                            method: 'share',
+                            href: 'http://www.rssheap.com'
+                        },
+                        function (response) {
+                            if (response && !response.error_message) {
+                                $.post("/json/facebook", { guid: '@user.GUID.ToString()' }, function (response) {
+                                    window.location = window.location;
+                                });
+                            }
+                        });
+                    });
+                });
+            </script>
+        );
+    }
+}
+
+@Html.AntiForgeryToken()
+
+<section id="page-title">
+    <div class="container clearfix">
+        <h1>Become a Pro</h1>
+        <span>Help support development of rssheap and get some additional features!</span>
+    </div>
+</section>
+
+@if (freePro)
+{
+    <section id="content" style="margin-bottom: 0px;">
+        <div class="content-wrap">
+            <div class="container clearfix">
+
+                <div class="col_full">
+                    Your pro subscription has been activated
+                </div>
+                <div class="col_full">
+                    Hi @user.UserName, thank you for supporting rssheap. Your subscription is valid untill @DateTime.Now.AddYears(1).ToLongDateString() @DateTime.Now.AddYears(1).ToShortTimeString().
+                    You now have prioritized support among other things so feel free to contact us if you need anything.
+                </div>
+            </div>
+        </div>
+    </section>
+    return;
+}
+
+<section id="content" style="margin-bottom: 0px;">
+    <div class="content-wrap">
+        <div class="container clearfix">
+
+            <div class="col_full">
+                You will only be charged once and when your subscription is over we will send you an email to renew your subscription. We do not want to automatically charge your credit card. If you are not sattisfied with the service at any way, we will refund the money to you.
+            </div>
+
+            @if (true || user != null && (!user.SharedOnFacebook || !user.SharedOnTwitter))
+            {
+                <div class="col_full">
+                    <h5>Want to get pro subscription for free?</h5>
+
+                    @if (true || user != null && !user.SharedOnFacebook)
+                    {
+                        <div>
+                            <a id="facebook" href="#">Share this on Facebook to get a 5$ discount</a>
+                        </div>
+                    }
+                    else if (user == null)
+                    {
+                        <div>
+                            <a href="/login?returnurl=/home/pro">Login and share the post on Facebook to get a 5$ discount</a>
+                        </div>
+                    }
+
+                    @if (true || user != null && !user.SharedOnTwitter)
+                    {
+                        <div>
+                            <a href="https://twitter.com/intent/tweet?url=http://rssheap.com&text=rssheap aggregates feeds about software development and ranks items by votes - try it out">Tweet this for a 5$ discount</a>
+                        </div>
+                    }
+                    else if (user == null)
+                    {
+                        <div>
+                            <a href="/login?returnurl=/home/pro">Login and Tweet for a 5$ discount</a>
+                        </div>
+                    }
+                </div>
+            }
+
+            <div class="pricing-box pricing-extended bottommargin clearfix">
+
+                <div class="pricing-desc">
+                    <div class="pricing-title">
+                        <h3>This is what you will be getting with the pro version:</h3>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="clearfix">
+                            <li>We will very much appreciate your support</li>
+                            <li><b>Unlimited</b> number of searches per day</li>
+                            <li>RSS feeds for tags</li>
+                            <li>RSS feeds for folders</li>
+                            <li>RSS Feeds for favorites</li>
+                            <li>Get anwsers in 12 hours</li>
+                            <li>Prioritized support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-action-area">
+                    <div class="pricing-meta">
+
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-unit">$</span>@price<span class="price-tenure">per year</span>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="/paypal/order"
+                           class="button button-3d button-xlarge btn-block nomargin">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

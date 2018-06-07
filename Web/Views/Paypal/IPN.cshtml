@@ -1,0 +1,44 @@
+﻿@model PaymentVM
+
+@{
+    ViewBag.Title = "IPN";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section seo
+{
+    <title>Thank you</title>
+}
+
+@{
+    var validUntil = Model.Payment.Date.AddYears(1);
+    var userName = Model.User.UserName;
+}
+
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>Your payment was successful</h1>
+    </div>
+
+</section>
+
+<section id="content" style="margin-bottom: 0px;">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            Hi @userName, thank you for supporting rssheap. Your subscription is valid untill @validUntil.ToLongDateString() @validUntil.ToShortTimeString().
+            You now have prioritized support among other things so feel free to contact us if you need anything.
+
+            <br />
+            <br />
+            <br />
+            <a href="/" class="btn btn-danger">Continue</a>
+
+        </div>
+
+    </div>
+
+</section>

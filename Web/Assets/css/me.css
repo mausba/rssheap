@@ -1,0 +1,209 @@
+﻿.content
+{
+    background: #edeff1;
+}
+
+.profile-section
+{
+    padding: 20px;
+    border-bottom: 1px solid #d3d5d7;
+}
+
+.profile-info
+{
+    color: #838383;
+    font-size: 13px;
+    position: relative;
+}
+
+    .profile-info span
+    {
+    }
+
+    .profile-info .column
+    {
+        float: left;
+        width: 50%;
+    }
+
+    .profile-info .img
+    {
+        float: left;
+        margin-top: 8px;
+    }
+
+    .profile-info .bio
+    {
+        float: left;
+        margin-left: 15px;
+    }
+
+        .profile-info .bio h1
+        {
+            color: #6288ae;
+        }
+
+        .profile-info .bio span
+        {
+            display: block;
+        }
+
+        .profile-info .bio .link
+        {
+            text-decoration: underline;
+        }
+
+    .profile-info .right
+    {
+        background: #edeff1;
+    }
+
+        .profile-info .right .reputation
+        {
+            max-width: 100px;
+            text-align: center;
+        }
+
+            .profile-info .right .reputation span
+            {
+                display: block;
+            }
+
+            .profile-info .right .reputation .count
+            {
+                color: #6898ce;
+                font-size: 50px;
+            }
+
+            .profile-info .right .reputation .label
+            {
+                margin-top: -5px;
+            }
+
+        .profile-info .right .edit
+        {
+            text-decoration: underline;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .profile-info .right .lastseen
+        {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+
+.profile-tags
+{
+}
+
+    .profile-tags .column
+    {
+        width: 50%;
+        float: left;
+    }
+
+        .profile-tags .column .tags
+        {
+            margin-right: 50px;
+        }
+
+    .profile-tags h3
+    {
+        color: #5e5e5e;
+    }
+
+    .profile-tags .tags
+    {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+    }
+
+        .profile-tags .tags .post-tag
+        {
+            font-size: 12px;
+            padding: 4px 10px;
+            background: #f9f9f9;
+            box-shadow: 0 0 1px #aaa;
+            -moz-box-shadow: 0 0 1px #aaa;
+            -webkit-box-shadow: 0 0 1px #aaa;
+            border-radius: 2px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            position: relative;
+            margin: 0 0 5px 0;
+            display: inline-block;
+        }
+
+.profile-tabs
+{
+}
+
+    .profile-tabs .subheader
+    {
+        margin-bottom: 0px;
+        border: none;
+    }
+
+    .profile-tabs #tabs
+    {
+        float: none;
+    }
+
+        .profile-tabs #tabs a,
+        .profile-tabs #tabs a.youarehere
+        {
+            border: none;
+            float: none;
+            display: inline-block;
+        }
+
+            .profile-tabs #tabs a:hover
+            {
+                background: none;
+            }
+
+            .profile-tabs #tabs a.youarehere:hover
+            {
+                background: white;
+            }
+
+    .profile-tabs .tab-content
+    {
+        background: white;
+        padding: 0 20px 20px 20px;
+    }
+
+    .profile-tabs .right
+    {
+        width: 100%;
+    }
+
+    .profile-tabs .feeds .feed-description
+    {
+        display: block;
+        font-size: 13px;
+        color: #838383;
+        margin-top: 5px;
+    }
+
+    .profile-tabs .tagged-articles
+    {
+    }
+
+        .profile-tabs .tagged-articles .status
+        {
+            font-size: 11px;
+            color: #545c71;
+        }
+
+        .profile-tabs .tagged-articles .tagged-with-label
+        {
+            font-size: 12px;
+            color: #545c71;
+            display: inline-block;
+            margin-right: 5px;
+        }

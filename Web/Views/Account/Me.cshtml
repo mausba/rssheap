@@ -1,0 +1,108 @@
+﻿@model AccountVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+}
+
+@section seo
+{
+    <title>@Model.User.UserName</title>
+}
+
+@section head
+{
+    <link href="/assets/css/article.css?ver=3" rel="stylesheet" />
+    <link href="/assets/css/me.css" rel="stylesheet" />
+}
+
+<div class="content clearfix">
+
+    <div class="profile-section profile-info clearfix">
+
+        <div class="column">
+
+            <div class="img">
+                @Html.Gravatar(Model.User.Email, defaultImage: GravatarDefaultImage.Identicon)
+            </div>
+
+            <div class="bio">
+                <h1>Davor Zlotrg</h1>
+                <span>Member for 3 months</span>
+                <span>Sarajevo, Bosnia and Herzegovina</span>
+                <span class="link"><a href="/">http://www.rssheap.com</a></span>
+            </div>
+
+        </div>
+
+        <div class="column right">
+
+            <div class="reputation">
+                <span class="count">1,2k</span>
+                <span class="label">reputation</span>
+            </div>
+
+            <a class="edit" href="#">Edit</a>
+            <span class="lastseen">last seen 3 min. ago</span>
+
+        </div>
+
+    </div>
+
+    <div class="profile-section profile-tags clearfix">
+
+        <div class="column">
+
+            <h3>Favorite tags</h3>
+            <div class="tags clearfix">
+                @foreach (var favTag in Model.User.Tags)
+                {
+                    <a class="post-tag" href="@favTag.PrettyUrl">@favTag.Name</a>
+                }
+            </div>
+
+        </div>
+
+        <div class="column">
+            <h3>Ignored tags</h3>
+            <div class="tags clearfix">
+                @foreach (var ignTag in Model.User.IgnoredTags)
+                {
+                    <a class="post-tag" href="@ignTag.PrettyUrl">@ignTag.Name</a>
+                }
+            </div>
+        </div>
+
+    </div>
+
+    <div class="profile-tabs">
+
+        <div id="mainbar">
+            <div class="subheader">
+
+                <div id="tabs">
+                    <a @(Model.Tab == "feeds" ? "class=youarehere" : string.Empty) href="/account/me?tab=feeds">Your Feeds</a>
+                    <a @(Model.Tab == "tagged" ? "class=youarehere" : string.Empty) href="/account/me?tab=tagged">Tagged Articles</a>
+                    <a @(Model.Tab == "ignored" ? "class=youarehere" : string.Empty) href="/account/me?tab=ignored">Ignored Articles</a>
+                    <a @(Model.Tab == "reputation" ? "class=youarehere" : string.Empty) href="/account/me?tab=reputation">Reputation</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right tab-content">
+
+            @switch (Model.Tab)
+            {
+                case "feeds": 
+                    @Html.Partial("Tabs/_Feeds", Model.Feeds)
+                    break;
+                    case "tagged":
+                    @Html.Partial("Tabs/_TaggedArticles", Model)
+                    break;
+                    case "ignored":
+                    @Html.Partial("Tabs/_IgnoredArticles", Model)
+                    break;
+            }
+
+        </div>
+    </div>
+</div>

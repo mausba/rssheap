@@ -1,0 +1,51 @@
+﻿@model List<Feed>
+@{
+    ViewBag.Title = "Feeds";
+    Layout = null;
+
+    Feed feed = Model.Any() ? Model.First() : null;
+    var articles = feed != null ? new FeedService().GetArticlesWithoutBody(feed.Id) : new List<Article>();
+}
+
+<h2>
+    Feeds @Model.Count @(feed != null ? feed.Name : string.Empty)
+
+
+    @if(articles.Count > 0)
+    {
+        <span>@articles.Count Articles (@articles.OrderByDescending(a => a.Published).First().Published.ToString("dd-MM-yyyy"))
+
+            &nbsp;&nbsp;
+            @articles.Sum(a => a.LikesCount) likes
+        </span>
+    }
+    else
+    {
+     <span>0 Articles</span>   
+    }
+</h2>
+<a target="_blank" href="@(feed != null ? (!feed.SiteUrl.IsNullOrEmpty() ? feed.SiteUrl : feed.Url) : string.Empty)">Url</a>
+
+@if (feed == null)
+{
+    return;
+}
+
+<form method="post">
+    <input type="hidden" name="feedId" value="@feed.Id" />
+    <input type="hidden" name="action" value="reviewed" />
+    <input type="submit" value="Mark as reviewed" />
+</form>
+<form method="post">
+    <input type="hidden" name="feedId" value="@feed.Id" />
+    <input type="hidden" name="action" value="public" />
+    <input type="submit" value="Make it public" onclick="return confirm('Are you sure you want to make it public?');" />
+</form>
+<form method="post">
+    <input type="hidden" name="feedId" value="@feed.Id" />
+    <input type="hidden" name="action" value="delete" />
+    <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to make delete it?');" />
+</form>
+
+<iframe width="1400" height="900" src="@Model.First().SiteUrl"></iframe>
+

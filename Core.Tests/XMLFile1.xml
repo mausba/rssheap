@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/atom10full.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" xml:lang="en-US">
+  <id>tag:www.cssflow.com,2005:/feed</id>
+  <link rel="alternate" type="text/html" href="http://www.cssflow.com" />
+
+  <title>CSSFlow</title>
+  <updated>2013-11-26T13:28:58Z</updated>
+  <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://feeds.feedburner.com/WebInterfaceLab" />
+  <feedburner:info uri="webinterfacelab" />
+  <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" />
+  <feedburner:emailServiceId>WebInterfaceLab</feedburner:emailServiceId>
+  <feedburner:feedburnerHostname>http://feedburner.google.com</feedburner:feedburnerHostname>
+  <feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2FWebInterfaceLab" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/62</id>
+    <published>2013-11-26T13:28:58Z</published>
+    <updated>2013-12-26T11:50:06Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/qbelQnZXcco/action-buttons" />
+    <title>Action Buttons</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/action-buttons"&gt;&lt;img src="http://cdn.cssflow.com/snippets/action-buttons/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple navigation bar with clean buttons.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/923040-Action-Buttons"&gt;Jona Pomerance&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/action-buttons/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/qbelQnZXcco" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/action-buttons</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/61</id>
+    <published>2013-10-02T12:27:04Z</published>
+    <updated>2014-08-20T18:01:38Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/VZtTacM08aY/registration-form" />
+    <title>Registration Form</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/registration-form"&gt;&lt;img src="http://cdn.cssflow.com/snippets/registration-form/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A complete registration form with a “gender” toggle switch, clean text inputs, and a fancy submit button.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The switch could also be used to toggle between sign-up and login.&lt;/p&gt;
+
+      &lt;p&gt;On Mac OS X and iOS this snippet uses the light/semi-bold font weights of Helvetica Neue for an even sharper look.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/1115108-Register-UI-Free-PSD-included"&gt;Ionut Zamfir&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/registration-form/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/VZtTacM08aY" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/registration-form</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Post/8</id>
+    <published>2013-10-02T12:26:02Z</published>
+    <updated>2013-10-02T12:26:02Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/WV8IWi-vqkA/clarity-ios7" />
+    <title>New Clarity CSS UI Kit Inspired By iOS7</title>
+    <content type="html">
+      &lt;p&gt;Hi everyone,&lt;/p&gt;
+
+      &lt;p&gt;I&amp;#39;m happy to announce the release of my latest CSS UI kit: &lt;a href="http://www.cssflow.com/ui-kits/clarity-ios7"&gt;Clarity&lt;/a&gt;. It comes with a clean, touch-optimized interface that closely matches iOS&amp;#39;s new look &amp;amp; feel, plus the highest number of UI components of any of my kits.&lt;/p&gt;
+
+      &lt;p&gt;Here&amp;#39;s a preview:&lt;/p&gt;
+
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/ui-kits/clarity-ios7"&gt;&lt;img src="http://cdn.cssflow.com/kits/clarity_css_ui_kit_preview_432.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;This kit wouldn&amp;#39;t have been possible without the help of Justin Noel, who funded its development for his app &lt;a href="http://www.kidsintouch.com/"&gt;Kids in Touch&lt;/a&gt;. He&amp;#39;s creating a great app to help kids stay in touch with their family and friends that will be launching later this fall. You can sign up at &lt;a href="http://www.kidsintouch.com/"&gt;kidsintouch.com&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;As with all my other kits, &lt;a href="http://www.cssflow.com/ui-kits/clarity-ios7"&gt;Clarity&lt;/a&gt; has been created entirely with HTML and CSS (no images), making it fast, easy to maintain, and resolution-independent.&lt;/p&gt;
+
+      &lt;p&gt;The code has been extensively tested in iOS 6 and 7, Android 4+, and PhoneGap (+ modern desktop browsers).&lt;/p&gt;
+
+      &lt;p&gt;Check out the demo &lt;a href="http://www.cssflow.com/ui-kits/clarity-ios7/demo"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;Happy coding!&lt;/p&gt;
+
+      &lt;p&gt;Thibaut&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/WV8IWi-vqkA" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/ui-kits/clarity-ios7</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/60</id>
+    <published>2013-09-26T14:11:34Z</published>
+    <updated>2014-06-01T04:44:05Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/opRB3BbzI4g/plans-pricing-table" />
+    <title>Plans &amp; Pricing Table</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/plans-pricing-table"&gt;&lt;img src="http://cdn.cssflow.com/snippets/plans-pricing-table/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple pricing table to showcase your subscription plans.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Comes with the usual “highlighted” plan.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/1184256-Pricing-table-free-PSD"&gt;Benoît Philibert&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/plans-pricing-table/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/opRB3BbzI4g" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/plans-pricing-table</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/59</id>
+    <published>2013-08-20T13:15:57Z</published>
+    <updated>2014-06-27T23:56:39Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/_pymquCi3Ms/simple-toggle-switch" />
+    <title>Simple Toggle Switch</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/simple-toggle-switch"&gt;&lt;img src="http://cdn.cssflow.com/snippets/simple-toggle-switch/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple toggle switch with subtle shadows and details.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/1003682-Simple-Toggle-Switch-PSD"&gt;Luke Etheridge&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/simple-toggle-switch/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/_pymquCi3Ms" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/simple-toggle-switch</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/58</id>
+    <published>2013-07-24T13:32:39Z</published>
+    <updated>2013-10-07T21:31:34Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/rU0Zu1vbjvA/download-buttons" />
+    <title>Download Buttons</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/download-buttons"&gt;&lt;img src="http://cdn.cssflow.com/snippets/download-buttons/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;You&amp;#39;ve seen it before, but these always come in handy: a set of shiny buttons in multiple colors.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The inner glow effect (which is slightly visible by default but lights up on hover) is created using CSS3 radial gradients.&lt;/p&gt;
+
+      &lt;p&gt;The Sass source includes a function that generates color variations from a single input color. Download it &lt;a href="http://www.cssflow.com/snippets/download-buttons.zip"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://365psd.com/day/3-357/"&gt;Julius Csurgo&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/download-buttons/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/rU0Zu1vbjvA" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/download-buttons</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/57</id>
+    <published>2013-07-10T13:58:01Z</published>
+    <updated>2014-05-01T11:37:40Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/X_VDavurA_8/task-list" />
+    <title>Task List</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/task-list"&gt;&lt;img src="http://cdn.cssflow.com/snippets/task-list/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple task list with custom checkboxes and pure CSS icons.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The custom checkboxes are created using a combination of the &lt;code&gt;:checked&lt;/code&gt; and &lt;code&gt;~&lt;/code&gt; adjacent sibling selectors. This allows us to dynamically style an element that comes after the checkbox, as if it were the checkbox itself. The native inputs can then be hidden from view while we keep the ability to click/toggle by wrapping everything in a label.&lt;/p&gt;
+
+      &lt;p&gt;The check marks use the same technique described in the &lt;a href="http://www.cssflow.com/snippets/check-buttons"&gt;check buttons&lt;/a&gt; snippet.&lt;/p&gt;
+
+      &lt;p&gt;The list/3-lines icon is made of a simple rectangle with two offset shadows.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://weboxeur.com/liste-de-taches-psd/"&gt;Wassim Bourguiba&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;Check out my new project:&lt;/strong&gt; &lt;a href="http://devdocs.io"&gt;DevDocs&lt;/a&gt; is a web app that provides a fast, all-in-one interface for reading API docs such as HTML and CSS.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/task-list/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/X_VDavurA_8" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/task-list</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/56</id>
+    <published>2013-06-19T07:58:59Z</published>
+    <updated>2013-06-19T07:58:59Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/r1_BxOQsp0I/shopping-cart-checkout-widget" />
+    <title>Shopping Cart Checkout Widget</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/shopping-cart-checkout-widget"&gt;&lt;img src="http://cdn.cssflow.com/snippets/shopping-cart-checkout-widget/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A dark shopping cart list with pixel-perfect shadows, a shiny checkout button, and glossy image overlays.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The overlay effect is created using an angled linear gradient inside a pseudo-element that sits on top of the image.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://pixelb.in/simple-shopping-cart-checkout-widget-507/"&gt;Aleksandar Djuric&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/shopping-cart-checkout-widget/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/r1_BxOQsp0I" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/shopping-cart-checkout-widget</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/55</id>
+    <published>2013-06-05T14:08:02Z</published>
+    <updated>2014-07-01T15:40:56Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/odb2wbp91EI/sign-up-form" />
+    <title>Sign Up Form</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/sign-up-form"&gt;&lt;img src="http://cdn.cssflow.com/snippets/sign-up-form/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple sign up form with fresh colors and subtle three-dimensional effects.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The top border is created using a linear gradient with fixed color-stop points.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/1037950-Sign-up-freebie"&gt;Dylan Opet&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/sign-up-form/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/odb2wbp91EI" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/sign-up-form</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/54</id>
+    <published>2013-05-23T13:24:18Z</published>
+    <updated>2014-03-10T23:53:15Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/eOnZLmVUyxg/tabbed-widget" />
+    <title>Tabbed Widget</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/tabbed-widget"&gt;&lt;img src="http://cdn.cssflow.com/snippets/tabbed-widget/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple tabbed widget that works without JavaScript.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;This snippet makes heave use of the new CSS3 selectors to create a tabbed content area using only CSS, while keeping the markup to a minimum (no hidden inputs &amp;amp; labels).&lt;/p&gt;
+
+      &lt;p&gt;Each tab&amp;#39;s content is toggled using the &lt;code&gt;:target&lt;/code&gt; pseudo class selector and the current tab is highlighted using the &lt;code&gt;~&lt;/code&gt; adjacent sibling combinator.&lt;/p&gt;
+
+      &lt;p&gt;I then went a bit overboard with the child/type selectors in order to have the first tab activated by default.&lt;/p&gt;
+
+      &lt;p&gt;Read the full source &lt;a href="http://www.cssflow.com/snippets/tabbed-widget/demo/scss"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code&gt;#target&lt;/code&gt; links make the page jump to the element with the matching ID when they&amp;#39;re clicked. This is a bad user experience and I wouldn&amp;#39;t use it in production. This snippet is more a demonstration of what CSS can do than a usable implementation. ;)&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/961963-Contact-Designers-PSD-Included"&gt;Aaron Sananes&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/tabbed-widget/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/eOnZLmVUyxg" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/tabbed-widget</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/53</id>
+    <published>2013-05-07T14:47:31Z</published>
+    <updated>2014-02-24T19:03:39Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/6i3AbbzCAkg/check-buttons" />
+    <title>Check Buttons</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/check-buttons"&gt;&lt;img src="http://cdn.cssflow.com/snippets/check-buttons/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A set of dark, round buttons with a pure CSS check mark.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The check mark is created using CSS3 transforms. The button text is replaced by an empty rectangle with two borders in a &lt;code&gt;before&lt;/code&gt; pseudo-element. The rectangle is then rotated by 45 degrees. You can read the source &lt;a href="http://www.cssflow.com/snippets/check-buttons/demo/scss"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;Also included in the snippet is a version that uses a Unicode character, which works as a fallback for browsers that don&amp;#39;t support CSS transforms (IE 8).&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/amont"&gt;Alex Montague&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/check-buttons/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/6i3AbbzCAkg" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/check-buttons</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/52</id>
+    <published>2013-04-17T14:26:34Z</published>
+    <updated>2013-05-18T05:32:44Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/IZE6F0J-do8/checkout-form" />
+    <title>Checkout Form</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/checkout-form"&gt;&lt;img src="http://cdn.cssflow.com/snippets/checkout-form/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A clean and simple checkout form with credit card fields, submit button and a fancy price badge.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/960330-Checkout-Form-PSD"&gt;Umar Irshad&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/checkout-form/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/IZE6F0J-do8" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/checkout-form</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/51</id>
+    <published>2013-04-03T14:36:06Z</published>
+    <updated>2014-08-14T13:25:09Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/LYnNt3s9uJo/dark-datepicker" />
+    <title>Dark Datepicker</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/dark-datepicker"&gt;&lt;img src="http://cdn.cssflow.com/snippets/dark-datepicker/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A dark pop-up date picker with a slick navigation bar and crip shadows.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/899662-Putty-Pack"&gt;Alexey Anatolievich&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/dark-datepicker/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/LYnNt3s9uJo" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/dark-datepicker</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Post/7</id>
+    <published>2013-03-21T16:05:03Z</published>
+    <updated>2013-03-21T16:12:57Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/gJwx-tWI4w8/flat" />
+    <title>New Flat UI Kit</title>
+    <content type="html">
+      &lt;p&gt;&lt;strong&gt;I&amp;#39;ve released a new &amp;quot;Flat&amp;quot; CSS UI kit and updated my other kits with new &amp;amp; improved elements.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Here&amp;#39;s a preview of the new kit:&lt;/p&gt;
+
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/ui-kits/flat"&gt;&lt;img src="http://cdn.cssflow.com/kits/flat_css_ui_kit_preview.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;I used lightweight CSS and some advanced techniques to create a sleek user interface that you can incorporate into any web project.&lt;/p&gt;
+
+      &lt;p&gt;As usual it comes fully tested in IE 8 and other modern web browsers, and for only $9 you can use it in an unlimited number of websites. &lt;/p&gt;
+
+      &lt;p&gt;Check out the complete UI on &lt;a href="http://www.cssflow.com/ui-kits/flat/demo"&gt;the demo page&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;The &amp;quot;Colorful&amp;quot;, &amp;quot;Graphite&amp;quot; and &amp;quot;Dark&amp;quot; kits have also received major updates with new elements including tables, headings, dropdowns, alert messages, and more.&lt;/p&gt;
+
+      &lt;p&gt;You can demo these new versions &lt;a href="http://www.cssflow.com/ui-kits/colorful/demo"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;I hope you like it. If you have any comments or suggestions I&amp;#39;d love to hear them.&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/gJwx-tWI4w8" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/ui-kits/flat</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/50</id>
+    <published>2013-03-21T16:02:41Z</published>
+    <updated>2014-02-24T19:03:44Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/J08JuTREjjc/flip-down-clock" />
+    <title>Flip-down Clock</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/flip-down-clock"&gt;&lt;img src="http://cdn.cssflow.com/snippets/flip-down-clock/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A “skeuomorphic” flip-down clock for your countdowns and timers.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;As usual this is all done with CSS using CSS3 gradients and shadows.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://365psd.com/day/3-105-2/"&gt;Julien Debove&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/flip-down-clock/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/J08JuTREjjc" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/flip-down-clock</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/49</id>
+    <published>2013-03-13T14:33:53Z</published>
+    <updated>2014-06-27T11:19:34Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/BVvYVkadhiw/glossy-buttons" />
+    <title>Glossy Buttons</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/glossy-buttons"&gt;&lt;img src="http://cdn.cssflow.com/snippets/glossy-buttons/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A set of sleek, glossy buttons in multiple colors.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Download &lt;a href="http://www.cssflow.com/snippets/glossy-buttons.zip"&gt;the Sass source&lt;/a&gt; to quickly generate your own color variation.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://forrst.com/posts/Glossy_Buttons_Freebie-H5f"&gt;Alex Montague&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/glossy-buttons/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/BVvYVkadhiw" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/glossy-buttons</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/48</id>
+    <published>2013-03-06T16:06:17Z</published>
+    <updated>2014-03-23T05:51:17Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/pa1MX0fqLnA/pricing-table" />
+    <title>Pricing Table</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/pricing-table"&gt;&lt;img src="http://cdn.cssflow.com/snippets/pricing-table/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple pricing table. Each plan has a title, price, list of features, and purple sign-up button.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Can you guess how the dashed line is created? Answer &lt;a href="http://www.cssflow.com/snippets/pricing-table/demo/scss"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/769830-Pricing-Table-Psd-Freebie"&gt;Edi Gil&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/pricing-table/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/pa1MX0fqLnA" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/pricing-table</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Snippet/47</id>
+    <published>2013-02-20T19:03:33Z</published>
+    <updated>2013-06-07T06:03:36Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/pJiYlX8QWFg/social-buttons" />
+    <title>Social Buttons</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/social-buttons"&gt;&lt;img src="http://cdn.cssflow.com/snippets/social-buttons/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A set of social media buttons for tweeting, liking, and subscribing.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The icons are image-based but a double-resolution version is included for high-density screens.&lt;/p&gt;
+
+      &lt;p&gt;Check out &lt;a href="http://www.cssflow.com/snippets/social-buttons/demo/scss"&gt;the source&lt;/a&gt; for an example of using CSS media queries to serve Retina-ready assets to high-density devices.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/social-buttons/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/pJiYlX8QWFg" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/social-buttons</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.cssflow.com,2005:Post/6</id>
+    <published>2013-02-20T18:58:42Z</published>
+    <updated>2013-02-20T19:17:34Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/vloguKMAVq4/mobile" />
+    <title>New Name &amp; Mobile UI Kit</title>
+    <content type="html">
+      &lt;p&gt;Hi everyone&lt;/p&gt;
+
+      &lt;p&gt;WebInterfaceLab has changed name and is now &lt;a href="http://www.cssflow.com"&gt;CSSFlow&lt;/a&gt;. With most resources now being CSS-only and me not liking the old name, I decided it was time for a change.&lt;/p&gt;
+
+      &lt;p&gt;I took this opportunity to completely re-design the site, this time using a responsive approach and an icon font in place of image sprites (which is much easier to maintain thanks to tools like &lt;a href="http://icomoon.io/"&gt;IcoMoon&lt;/a&gt; and &lt;a href="http://www.fontsquirrel.com/tools/webfont-generator"&gt;FontSquirrel&lt;/a&gt;). I hope you like &lt;a href="http://www.cssflow.com"&gt;it&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;These past few weeks I&amp;#39;ve also been hard at work creating a UI kit targeted at mobile devices.&lt;br&gt;
+      The result is this: a native-like UI created entirely with CSS.&lt;/p&gt;
+
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/ui-kits/mobile"&gt;&lt;img src="http://cdn.cssflow.com/kits/mobile_css_ui_kit_preview_432.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;I tested everything extensively in iOS 5+, Android 4+, and Opera Mobile 12.1.&lt;br&gt;
+      Check out all the screens and features &lt;a href="http://www.cssflow.com/ui-kits/mobile"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;Lastly, you can now preview all my UI kits directly in your browser. &lt;a href="http://www.cssflow.com/ui-kits/dark/demo"&gt;Have a look&lt;/a&gt;.&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/vloguKMAVq4" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/ui-kits/mobile</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.webinterfacelab.com,2005:Snippet/46</id>
+    <published>2013-01-30T15:10:00Z</published>
+    <updated>2014-06-26T11:34:04Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/yszjM7Lp1J4/facebook-login-form" />
+    <title>Facebook Login Form</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/facebook-login-form"&gt;&lt;img src="http://cdn.cssflow.com/snippets/facebook-login-form/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple login form in Facebook color scheme.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/808325-Facebook-Login-Freebie"&gt;Alex Montague&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/facebook-login-form/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/yszjM7Lp1J4" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/facebook-login-form</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.webinterfacelab.com,2005:Snippet/45</id>
+    <published>2013-01-16T16:27:21Z</published>
+    <updated>2013-10-16T15:58:14Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/GoOlDQIsxFc/metal-progress-bar" />
+    <title>Metal Progress Bar</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/metal-progress-bar"&gt;&lt;img src="http://cdn.cssflow.com/snippets/metal-progress-bar/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A tiny blue progress bar in a shiny “metallic” container.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Check out &lt;a href="http://www.cssflow.com/snippets/metal-progress-bar/demo/scss"&gt;the source&lt;/a&gt; for an example of using multiple gradients on a single element.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/748531-Progress-Bar-Freebie"&gt;Ivo Ivanov&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/metal-progress-bar/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/GoOlDQIsxFc" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/metal-progress-bar</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.webinterfacelab.com,2005:Snippet/44</id>
+    <published>2013-01-09T15:12:32Z</published>
+    <updated>2014-02-28T19:11:56Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/ocWIxfrYOdk/modal-box-contact-form" />
+    <title>Modal Box Contact Form</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/modal-box-contact-form"&gt;&lt;img src="http://cdn.cssflow.com/snippets/modal-box-contact-form/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;An elegant contact form in a modal box with a custom dropdown and round submit button.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://www.premiumpixels.com/freebies/modal-box-contact-form-psd/"&gt;Orman Clark&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/modal-box-contact-form/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/ocWIxfrYOdk" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/modal-box-contact-form</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.webinterfacelab.com,2005:Snippet/43</id>
+    <published>2012-12-19T16:48:47Z</published>
+    <updated>2014-06-03T16:29:44Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/u__o03oWCfw/app-navigation-with-notification-badges" />
+    <title>App Navigation with Notification Badges</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/app-navigation-with-notification-badges"&gt;&lt;img src="http://cdn.cssflow.com/snippets/app-navigation-with-notification-badges/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A simple app navigation with colorful notification badges.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The badges are generated from a single input color using Sass functions, which you can easily customize to create your own.&lt;/p&gt;
+
+      &lt;p&gt;Have a look at the source &lt;a href="http://www.cssflow.com/snippets/app-navigation-with-notification-badges/demo/scss"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://www.psdchat.com/resources/freebie-app-navigation/"&gt;Petrovski Marijan&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/app-navigation-with-notification-badges/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/u__o03oWCfw" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/app-navigation-with-notification-badges</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.webinterfacelab.com,2005:Post/5</id>
+    <published>2012-12-12T16:27:14Z</published>
+    <updated>2013-02-20T10:51:26Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/ab-g0laO7kI/dark" />
+    <title>New Dark UI Kit</title>
+    <content type="html">
+      &lt;p&gt;&lt;strong&gt;I&amp;#39;ve released a new &amp;quot;Dark&amp;quot; web interface kit.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;As with all the other kits it&amp;#39;s created entirely with CSS, easy to implement, and thoroughly tested.&lt;/p&gt;
+
+      &lt;p&gt;Here&amp;#39;s a preview:&lt;/p&gt;
+
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/ui-kits/dark"&gt;&lt;img src="http://cdn.cssflow.com/kits/dark_css_ui_kit_preview.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;New:&lt;/strong&gt; you can now save 30% and buy all 3 kits for $29.&lt;/p&gt;
+
+      &lt;p&gt;Check it out &lt;a href="http://www.cssflow.com/ui-kits"&gt;here&lt;/a&gt;.&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/ab-g0laO7kI" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/ui-kits/dark</feedburner:origLink>
+  </entry>
+  <entry>
+    <id>tag:www.webinterfacelab.com,2005:Snippet/42</id>
+    <published>2012-12-12T16:22:26Z</published>
+    <updated>2014-06-13T11:04:11Z</updated>
+    <link rel="alternate" type="text/html" href="http://feedproxy.google.com/~r/WebInterfaceLab/~3/340JURf-s_c/notepad" />
+    <title>Notepad</title>
+    <content type="html">
+      &lt;p&gt;&lt;a href="http://www.cssflow.com/snippets/notepad"&gt;&lt;img src="http://cdn.cssflow.com/snippets/notepad/preview-580.png" alt="Preview"&gt;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;A realistic notepad with a lined paper background and hidden pages at the bottom.&lt;/strong&gt;&lt;/p&gt;
+
+      &lt;p&gt;The lines are created using linear gradients, making the content fully flexible in width/height and keeping the markup clean.&lt;/p&gt;
+
+      &lt;p&gt;Original PSD by &lt;a href="http://dribbble.com/shots/592046-Notepad"&gt;Mathieu Berenguer&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;&lt;a href="http://www.cssflow.com/snippets/notepad/demo"&gt;Demo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;img src="http://feeds.feedburner.com/~r/WebInterfaceLab/~4/340JURf-s_c" height="1" width="1"/&gt;
+    </content>
+    <author>Thibaut</author>
+    <feedburner:origLink>http://www.cssflow.com/snippets/notepad</feedburner:origLink>
+  </entry>
+</feed>

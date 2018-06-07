@@ -1,0 +1,50 @@
+﻿@model User
+
+@{
+    ViewBag.Title = "Unsubscribe";
+}
+
+@section seo
+{
+    <title>Unsubscribe - rssheap</title>
+    <meta name="robots" content="noindex,nofollow">
+}
+
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>Unsubscribe</h1>
+    </div>
+
+</section>
+
+<section id="content" style="margin-bottom: 0px;">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            @if (Model.Subscribed)
+            {
+                <p>Hi @Model.UserName, click on unsubscribe and we will remove you from our mailing list.</p>
+                <form method="post" style="max-width: 200px;" class="topmargin">
+                    <input type="hidden" name="guid" value="@Request["guid"]" />
+
+                    <div class="col_full nobottommargin">
+                        <button type="submit"
+                                class="button button-3d btn-block nomargin button-dark"
+                                value="submit">
+                            Unsubscribe
+                        </button>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <p>Thank you. You are now unsubscribed from our newsletters!</p>
+            }
+        </div>
+
+    </div>
+
+</section>

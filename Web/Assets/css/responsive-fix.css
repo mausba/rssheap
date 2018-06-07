@@ -1,0 +1,485 @@
+.sm-top-links
+{
+    display: none;
+}
+
+.content .btn-out
+{
+    display: none;
+}
+
+.author-mobile
+{
+    display: none;
+}
+
+
+
+@media only screen and (max-width:1720px)
+{
+    .article
+    {
+        overflow: hidden;
+    }
+
+    .article-socials
+    {
+        padding: 20px 30px;
+    }
+
+    .article img
+    {
+        max-width: 100%;
+    }
+
+    .article iframe,
+    .article figure
+    {
+        width: 100% !important;
+    }
+
+    .article figure
+    {
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .article a {
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+    .article pre
+    {
+        overflow-x: visible;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .post-text code
+    {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:1200px)
+{
+    .post-block .title-box
+    {
+        width: 90%;
+    }
+
+    #popup
+    {
+        width: inherit;
+    }
+
+    .mobile-dno
+    {
+        display: none;
+    }
+
+    .left
+    {
+        position: fixed;
+        top: 70px;
+    }
+
+    .ignore-article
+    {
+        display: none;
+    }
+
+    #q
+    {
+        width: 300px;
+    }
+
+    .article .right img
+    {
+        max-width: 1100px;
+    }
+
+    .article-post .vote-box
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    .title-box .author-mobile a
+    {
+        font-size: 15px;
+        color: #adadab;
+    }
+
+    .top-header-content
+    {
+        width: inherit;
+        margin: 0;
+    }
+
+    .content
+    {
+        width: inherit;
+        overflow: hidden;
+    }
+
+        .content .right
+        {
+            width: inherit;
+            float: none;
+            overflow: auto;
+        }
+
+    .article
+    {
+        width: inherit;
+    }
+
+        .article .title a.title-link
+        {
+            width: inherit;
+        }
+
+        .article .ar-icons
+        {
+            width: 90px;
+        }
+
+    .article-content .foot
+    {
+        padding-top: 15px;
+        line-height: 25px;
+    }
+
+    .footer-content
+    {
+        width: inherit;
+        padding: 0 15px;
+    }
+}
+
+
+@media only screen and (min-width:320px) and (max-width:480px),(max-width:990px)
+{
+    .post-block .title-box
+    {
+        width: 85%;
+    }
+
+        .post-block .title-box .article-title
+        {
+            width: 100%;
+        }
+
+    .social
+    {
+        display: none;
+    }
+
+    .ignore-article
+    {
+        display: none;
+    }
+
+    .top-header-content
+    {
+        width: inherit;
+        margin: 0;
+    }
+
+    .top-header
+    {
+        min-height: 60px;
+        height: inherit;
+    }
+
+    .content
+    {
+        width: inherit;
+        overflow: hidden;
+    }
+
+        .content .right
+        {
+            width: inherit;
+            float: none;
+            overflow: auto;
+        }
+
+    .article
+    {
+        width: inherit;
+    }
+
+        .article .title a.title-link
+        {
+            width: inherit;
+        }
+
+        .article .foot .circle
+        {
+            display: none;
+        }
+
+        .article .foot a
+        {
+            display: block;
+            margin: 0 14px;
+        }
+
+        .article .article-socials
+        {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .article .ar-icons
+        {
+            width: 90px;
+        }
+
+    .article-content .foot
+    {
+        padding-top: 15px;
+        line-height: 25px;
+    }
+
+
+    .top-header .box .links
+    {
+        display: none;
+    }
+
+    .sm-top-links
+    {
+        display: block;
+        float: right;
+        position: relative;
+    }
+
+        .sm-top-links .link-dropdown
+        {
+            display: inline-block;
+            float: left;
+            margin-top: 4px;
+        }
+
+            .sm-top-links .link-dropdown .icon
+            {
+                height: 30px;
+                width: 30px;
+                display: inline-block;
+                background: #00A2C7;
+                float: left;
+                margin-left: 8px;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+                color: #fff;
+                font-size: 16px;
+            }
+
+                .sm-top-links .link-dropdown .icon a
+                {
+                    color: #fff;
+                }
+
+                .sm-top-links .link-dropdown .icon .fa
+                {
+                    line-height: 30px;
+                }
+
+            .sm-top-links .link-dropdown .dropdown-toggle
+            {
+                border: 1px solid #ccc;
+                border-top: 5px solid #00A2C7;
+                position: absolute;
+                top: 100%;
+                right: 0px;
+                display: none;
+                min-width: 260px;
+                background: #fff;
+                padding: 10px 8px;
+                text-align: left;
+                z-index: 110;
+            }
+
+            .sm-top-links .link-dropdown:hover .dropdown-toggle, .sm-top-links .link-dropdown:focus .dropdown-toggle, .sm-top-links .link-dropdown.open .dropdown-toggle
+            {
+                display: block;
+            }
+
+    #q
+    {
+        width: 240px;
+        padding-left: 10px;
+    }
+
+    .post-block .title-box
+    {
+        /*max-width:400px;*/
+    }
+
+    .footer-content
+    {
+        width: inherit;
+        padding: 0 15px;
+    }
+
+    .social-media li a
+    {
+        padding: 5px 9px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:480px), (max-width:1200px)
+{
+    .ignore-article
+    {
+        display: none;
+    }
+
+    .content .right
+    {
+        position: relative;
+    }
+
+    .white
+    {
+        position: relative;
+    }
+
+    .article-content .ctn
+    {
+        padding: 10px 15px;
+    }
+
+    .content.open .right .overlay
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background: rgba(0,0,0,0.2);
+        top: 0px;
+    }
+
+    .content .left
+    {
+        margin-left: -310px;
+        transition: all 0.5s ease-out 0.1s;
+        z-index: 100;
+    }
+
+        .content .btn-out
+        {
+            padding: 5px 6px;
+            min-width: 37px;
+            font-size: 22px;
+            color: #fff;
+            background: #545c71;
+            display: block;
+            position: fixed;
+            z-index: 200;
+            left: 30px;
+            top: 70px;
+            left: 0px;
+            transition: all 0.5s ease-out 0.1s;
+            opacity: 0.7;
+            filter: alpha(opacity=70); /* For IE8 and earlier */
+        }
+
+    .content.open .btn-out
+    {
+        transition: all 0.5s ease-out 0.1s;
+        left: -40px;
+    }
+
+    .content.open .left
+    {
+        margin-left: 0px;
+        transition: all 0.5s ease-out 0.1s;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:480px)
+{
+    .content .btn-out
+    {
+        position: absolute;
+    }
+
+    .post-block .title-box
+    {
+        width: 75%;
+    }
+
+    .post-block
+    {
+        padding-bottom: 20px;
+    }
+
+    #logo a img
+    {
+        width: 110px;
+        margin-top: 4px;
+    }
+
+    .post-block .title-box
+    {
+        margin: 0;
+    }
+
+    .top-header
+    {
+        padding: 10px 5px;
+    }
+
+    .top-header .box
+    {
+        width: 25%;
+    }
+
+    .top-header .al-right
+    {
+        width: 75%;
+    }
+
+    .tags-container ul li
+    {
+        width: 100%;
+    }
+
+    .ignore-article
+    {
+        display: none;
+    }
+
+    .author
+    {
+        display: none;
+    }
+
+    .author-mobile
+    {
+        display: inline;
+        font-size: 13px;
+        color: #545c71;
+    }
+
+    .article-post .vote-box .views
+    {
+        display: none;
+    }
+
+    .post-block .vote-box
+    {
+        width: 65px;
+    }
+
+    .ue-tab-container {
+	display: none !important;
+}
+}
