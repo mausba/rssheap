@@ -7,3 +7,9 @@ rssheap is a free open source web and mobile based reader built entirely on the 
 ### Contribute to rssheap
 rssheap is contribution focused and community driven. If you want to contribute back to rssheap you will need a Visual Studio 2017 Community Edition and MySQL server installed somewhere. 
 Before running the website you will need to import the schema, stored procedures and test data to MySQL. All the files are located under MySQLDB folder in the solution. 
+
+rssheap is built and maintained by [maus.ba][link1]
+
+
+
+   [link1]: <https://www.maus.ba>
