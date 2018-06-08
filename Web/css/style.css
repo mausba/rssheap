@@ -13659,3 +13659,11 @@ body:not(.no-transition) #wrapper,
     border-radius: 3px;
     white-space: nowrap;
 }
+
+#header-notice {
+    padding: 10px 0;
+    font-size: 14px;
+    background-color: #333;
+    color: #CCC;
+    border-bottom-color: rgba(0,0,0,0.2);
+}

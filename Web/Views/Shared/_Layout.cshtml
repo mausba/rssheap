@@ -42,6 +42,14 @@
 </head>
 
 <body class="stretched no-transition">
+
+    <div id="header-notice" class="dark">
+        <div class="container text-center header-notice-container copyright-links">
+            rssheap goes open source - all contributions are welcome - for more information follow this 
+            <a target="_blank" href="https://github.com/mausba/rssheap" class="copyright-links">link</a>
+        </div>
+    </div>
+
     <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1919764041602796&ev=PageView&noscript=1" />
     </noscript>
@@ -147,7 +155,7 @@
 
     @if (Request.Cookies["cookies"] == null)
     {
-        <div id="cookie-notice" role="banner" class="cn-bottom wp-default" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); display: block;">
+        <div id="cookie-notice" role="banner" class="cn-bottom wp-default" style="color: #CCC; background-color: #333; display: block;">
             <div class="cookie-notice-container">
                 <span id="cn-notice-text">By continuing to browse or by clicking “Accept All Cookies”, you agree to the storing of first- and third-party cookies on your device to enhance site navigation, analyse site usage, and assist in our marketing efforts.</span>
                 &nbsp;
