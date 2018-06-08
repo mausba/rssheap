@@ -1125,3 +1125,25 @@ li.folder {
     color: rgba(255,255,255,0.25);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
+
+#header-notice {
+    padding: 10px 0;
+    font-size: 12px;
+    background-color: #333;
+    color: #CCC;
+    border-bottom-color: rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.header-notice-container {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+}
+
+#header-notice .close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

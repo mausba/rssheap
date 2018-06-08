@@ -14,7 +14,7 @@
     var weekRequest = new ArticlesRequest
     {
         Week = true,
-        _PageSize = pageSize,
+        PageSize = pageSize,
         User = user
     };
     var weekArticles = FeedService.GetArticles(weekRequest);
@@ -26,7 +26,7 @@
         monthRequest = new ArticlesRequest
         {
             Month = true,
-            _PageSize = (pageSize - weekArticles.Count),
+            PageSize = (pageSize - weekArticles.Count),
             IgnoredArticleIds = weekArticles.Select(a => a.Id).ToList(),
             User = user
         };
@@ -44,7 +44,7 @@
         allTimeRequest = new ArticlesRequest
         {
             Votes = true,
-            _PageSize = (pageSize - (monthArticles.Count + weekArticles.Count)),
+            PageSize = (pageSize - (monthArticles.Count + weekArticles.Count)),
             IgnoredArticleIds = ignoredArticleIds,
             User = user
         };
@@ -167,7 +167,7 @@
                 })
             }
 
-            @if (allTimeArticles.Any())
+            if (allTimeArticles.Any())
             {
                 <tr>
                     <td width="580" valign="top" style="padding-top: 20px;">
