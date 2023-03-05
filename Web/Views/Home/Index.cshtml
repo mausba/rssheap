@@ -518,8 +518,8 @@
 
         @foreach (var article in Model.Articles)
         {
-            <div class="article-post post-block clearfix">
-                <div class="vote-box">
+            <div class="article-post post-block clearfix" style="margin-left: 15px;">
+                @*<div class="vote-box">
                     <div class="votes">
                         <div class="number positive">@article.LikesCount.FormatCount()</div>
                         <div class="attr">@(article.LikesCount == 1 ? "Vote" : "Votes")</div>
@@ -527,10 +527,10 @@
                     <div class="answ">
 
                     </div>
-                </div>
+                </div>*@
 
                 <!-- title -->
-                <div class="title-box">
+                <div class="title-box" style="width: 100%;">
 
                     <a id="@article.Id" class="article-title" href="@article.GetHref(Model.Request)">
                         @Html.Raw(article.Name)

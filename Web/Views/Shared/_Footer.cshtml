@@ -1,18 +1,18 @@
 ﻿@using Core.Utilities;
 
 @{
-    var cachePeriod = CachePeriod.ForHours(24);
+    //var cachePeriod = CachePeriod.ForHours(24);
 
-    var facebookLikes = CacheClient.Default.GetOrAdd<int?>("facebooklikes", cachePeriod,
-        () => Facebook.GetNumberOfLikes("http://www.rssheap.com")) ?? 0;
+    //var facebookLikes = CacheClient.Default.GetOrAdd<int?>("facebooklikes", cachePeriod,
+    //    () => Facebook.GetNumberOfLikes("http://www.rssheap.com")) ?? 0;
 
-    var twitterShares = 311;
+    //var twitterShares = 311;
 
-    var googleShares = CacheClient.Default.GetOrAdd<int?>("googleshares", cachePeriod,
-        () => Google.GetNumberOfShares("http://www.rssheap.com")) ?? 0;
+    //var googleShares = CacheClient.Default.GetOrAdd<int?>("googleshares", cachePeriod,
+    //    () => Google.GetNumberOfShares("http://www.rssheap.com")) ?? 0;
 
-    var linkedInShares = CacheClient.Default.GetOrAdd<int?>("linkedinhares", cachePeriod,
-        () => LinkedIn.GetNumberOfShares("http://www.rssheap.com")) ?? 0;
+    //var linkedInShares = CacheClient.Default.GetOrAdd<int?>("linkedinhares", cachePeriod,
+    //    () => LinkedIn.GetNumberOfShares("http://www.rssheap.com")) ?? 0;
 
     var cssClass = ViewData["cssClass"] != null ? ViewData["cssClass"].ToString() : string.Empty;
 }
@@ -29,25 +29,25 @@
                 <li class="facebook-link">
                     <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.rssheap.com" target="_blank">
                         <i class="fa fa-facebook"></i>
-                        @facebookLikes
+                        @*@facebookLikes*@
                     </a>
                 </li>
                 <li class="twitter-link">
                     <a href="https://twitter.com/intent/tweet?text=@Url.Encode("#rssheap you subscribe to tags you are interested in (c#,java,ruby..) and we find great articles for you to read: http://rssheap.com")" target="_blank">
                         <i class="fa fa-twitter"></i>
-                        @twitterShares
+                        @*@twitterShares*@
                     </a>
                 </li>
                 <li class="googleplus-link">
                     <a href="https://plus.google.com/share?url=http://www.rssheap.com" target="_blank">
                         <i class="fa fa-google-plus"></i>
-                        @googleShares
+                        @*@googleShares*@
                     </a>
                 </li>
                 <li class="linkedin-link">
                     <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.rssheap.com&title=RSS Reader for Developers" target="_blank">
                         <i class="fa fa-linkedin"></i>
-                        @linkedInShares
+                        @*@linkedInShares*@
                     </a>
                 </li>
             </ul>
