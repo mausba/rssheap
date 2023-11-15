@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.25920.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsServices", "WindowsServices", "{DDDEF0CE-B244-46E5-AB8C-7EA3DAE4322F}"
 EndProject
@@ -66,6 +66,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{AE942C
 		MySQLDB\Schema\rssheap_userreadarticle.sql = MySQLDB\Schema\rssheap_userreadarticle.sql
 		MySQLDB\Schema\rssheap_usersearch.sql = MySQLDB\Schema\rssheap_usersearch.sql
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA4AE9A7-F9D5-4389-A401-8CA5776609A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
