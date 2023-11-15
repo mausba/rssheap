@@ -17,11 +17,11 @@ namespace Core.Data
 {
     public class DataProvider
     {
-        private static readonly string connStr = string.Empty;
+        private static readonly string connStr = "Server=localhost;Database=rss_com_db;Uid=root;Pwd=palestine";
 
         static DataProvider()
         {
-            connStr = Configuration.GetConnectionString();
+       //    connStr = Configuration.GetConnectionString();
         }
 
         private void ExecuteStoredProcedure(string storedProcedure, Dictionary<string, object> parameters = null)

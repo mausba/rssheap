@@ -96,15 +96,19 @@
                         <input id="q" type="text" name="q" placeholder="Search for articles" value="@Request["q"]" />
                         <input type="submit" style="display: none;" />
                     </form>
-                    <span title="@user.UserName" style="font-size: 12px;">
-                        Hi, @user.UserName.Shorten(30) @(isPro ? "(PRO)" : string.Empty)
+                    <span title="@user.FirstName" style="font-size: 12px;">
+                        Hi, @user.FirstName.Shorten(30) @(isPro ? "(PRO)" : string.Empty)
                     </span>
                     <a style="margin-right: 0; padding-right: 0; border: none;" href="/account/logoff">Logoff</a>
+
+
+                    <a style="margin-right: 0; padding-right: 0; border: none;" href="/account/EditProfile">Edit Profile</a>
 
                     @if (!isPro)
                     {
                         <a style="margin-right: 0; padding-right: 0; border: none;" href="/home/pro">Upgrade</a>
                     }
+
                 </div>
                 <div class="sm-top-links">
                     <div class="link-dropdown">
