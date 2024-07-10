@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Core.Enums;
 using Core.Models;
-using System.Data;
-using Core.Enums;
-using Core.Services;
 using Core.Models.Requests;
+using Core.Services;
 using Core.Services.SelectBuilders;
 using Core.Utilities;
 using MySql.Data.MySqlClient;
-using System.Diagnostics;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace Core.Data
 {
     public class DataProvider
     {
-        private static readonly string connStr = string.Empty;
+        private static readonly string connStr;
 
         static DataProvider()
         {

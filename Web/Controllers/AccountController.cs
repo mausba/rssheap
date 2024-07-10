@@ -517,6 +517,49 @@ namespace MvcWeb.Controllers
         }
 
         [RequiresSSL]
+        [Authorize]
+        public ActionResult EditProfile()
+        {
+            var user = userService.GetUser(Convert.ToInt32(User.Identity.Name));
+
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+
+            var model = new ProfileVM
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.UserName
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult EditProfile(ProfileVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = userService.GetUser(Convert.ToInt32(User.Identity.Name));
+
+                if (user == null)
+                    return HttpNotFound();
+
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+
+                userService.UpdateUser(user);
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(model);
+        }
+
+        [RequiresSSL]
         public ActionResult Register()
         {
             return View();
@@ -524,7 +567,7 @@ namespace MvcWeb.Controllers
 
         [RequiresSSL]
         [HttpPost]
-        public ActionResult Register(string email, string password, string password2)
+        public ActionResult Register(string email, string password, string password2, string firstname, string lastname)
         {
             if (!IsEmailAddress(email))
             {
@@ -571,6 +614,8 @@ namespace MvcWeb.Controllers
             var hash = PWDTK.PasswordToHash(salt, password, Configuration.GetHashIterations());
             user = new User
             {
+                FirstName = firstname,
+                LastName = lastname,
                 UserName = email,
                 Salt = salt,
                 Password = hash,

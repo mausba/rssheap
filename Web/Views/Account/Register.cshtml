@@ -60,6 +60,15 @@
                                     <label style="color: red;">@Model.ErrorMessage</label>
                                 </div>
                             }
+                            <div class="col_full" style="margin-bottom: 10px;">
+                                @*<label for="login-form-username">First name:</label>*@
+                                <input required type="text" name="firstname" id="firstname" class="form-control not-dark" placeholder="First Name *" value="@Request["firstname"]">
+                            </div>
+
+                            <div class="col_full" style="margin-bottom: 10px;">
+                                @*<label for="login-form-username">Last name:</label>*@
+                                <input required type="text" name="lastname" id="lastname" class="form-control not-dark" placeholder="Last Name *" value="@Request["lastname"]">
+                            </div>
 
                             <div class="col_full" style="margin-bottom: 10px;">
                                 @*<label for="login-form-username">Email:</label>*@

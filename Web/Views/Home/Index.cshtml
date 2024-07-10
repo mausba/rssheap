@@ -492,27 +492,27 @@
                     @message
                 </div>
             </div>
-        }
+        }       
         else if (!Model.Request.SearchQuery.IsNullOrEmpty())
         {
             if (Model.ExcededFreeSearchCount)
             {
-                <div class="post-block clearfix">
-                    <!-- title -->
-                    <div class="title-box" style="width: 100%;">
-                        With free subscription you are only able to search 2 times a day. <a href="/home/pro">Upgrade</a>
-                        to get unlimited access and help support rssheap development! Thank you.
-                    </div>
+            <div class="post-block clearfix">
+                <!-- title -->
+                <div class="title-box" style="width: 100%;">
+                    With free subscription you are only able to search 2 times a day. <a href="/home/pro">Upgrade</a>
+                    to get unlimited access and help support rssheap development! Thank you.
                 </div>
+            </div>
             }
             else
             {
-                <div class="post-block clearfix">
-                    <!-- title -->
-                    <div class="title-box" style="width: 100%;">
-                        Articles matching "@Model.Request.SearchQuery"
-                    </div>
+            <div class="post-block clearfix">
+                <!-- title -->
+                <div class="title-box" style="width: 100%;">
+                    Articles matching "@Model.Request.SearchQuery"
                 </div>
+            </div>
             }
         }
 
