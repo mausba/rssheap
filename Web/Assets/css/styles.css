@@ -319,11 +319,11 @@ input {
     -webkit-border-radius: 2px;
     padding: 8px;
     border: 1px solid #ddd;
-    background-image: url("img/srch.png");
+    /*background-image: url("img/srch.png");
     background-position: 10px center;
     background-repeat: no-repeat;
     background-size: auto 17px;
-    text-indent: 30px;
+    text-indent: 30px;*/
     font-size: 12px;
 }
 

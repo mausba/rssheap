@@ -86,21 +86,21 @@
 
         @Html.Script(
             @<script>
-                window.fbAsyncInit = function () {
-                    FB.init({
-                        appId: '685201244886528',
-                        xfbml: true,
-                        version: 'v2.0'
-                    });
-                };
+                 window.fbAsyncInit = function () {
+                     FB.init({
+                         appId: '685201244886528',
+                         xfbml: true,
+                         version: 'v2.0'
+                     });
+                 };
 
-                (function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) { return; }
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/en_US/sdk.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
+                 (function (d, s, id) {
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) { return; }
+                     js = d.createElement(s); js.id = id;
+                     js.src = "//connect.facebook.net/en_US/sdk.js";
+                     fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
             </script>
         );
 
@@ -217,18 +217,22 @@
                     </div>
                 </div>
 
-                <div class="pricing-action-area">
-                    <div class="pricing-meta">
-
-                    </div>
-                    <div class="pricing-price">
+                <div class="pricing-action-area" style="padding:5px;">
+                    <div class="pricing-price" style="padding-bottom: 5px;">
                         <span class="price-unit">$</span>@price<span class="price-tenure">per year</span>
                     </div>
                     <div class="pricing-action">
                         <a href="/paypal/order"
                            class="button button-3d button-xlarge btn-block nomargin">
-                            Get Started
+                            <i class="bi bi-paypal"></i> PayPal
                         </a>
+                        <p style="margin: 0;">OR</p>
+                        @using (Html.BeginForm("Checkout", "Card", FormMethod.Post))
+                        {
+                            <button type="submit" class="button button-3d button-xlarge btn-block nomargin">
+                                <i class="bi bi-credit-card"></i> Pay with card
+                            </button>
+                        }
                     </div>
                 </div>
 

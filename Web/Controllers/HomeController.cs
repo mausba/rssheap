@@ -13,6 +13,7 @@ using System.ServiceModel.Syndication;
 using System.Xml;
 using Core.Caching;
 
+using Web.ViewModels;
 namespace MvcWeb.Controllers
 {
     [Authorize]
@@ -235,6 +236,11 @@ namespace MvcWeb.Controllers
         [AllowAnonymous]
         public ActionResult Pro()
         {
+            var user = CurrentUser;
+            if (user != null && PaymentService.IsPro(user))
+            {
+                return RedirectToAction("Index", "Card");
+            }
             return View();
         }
 

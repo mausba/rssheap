@@ -422,7 +422,9 @@ namespace Core.Data
 					            User.Subscribed = @subscribed,
                                 User.HideOlderThan = @hideolderthan,
                                 User.SharedOnTwitter = @sharedontwitter,
-                                User.SharedOnFacebook = @sharedonfacebook
+                                User.SharedOnFacebook = @sharedonfacebook,
+                                User.UserName = @userName,
+                                User.IsAdmin = @isAdmin
 	                        where User.Id = @id;";
 
             GetFromSelect(update,
@@ -445,7 +447,8 @@ namespace Core.Data
                     { "subscribed", user.Subscribed },
                     { "hideolderthan", user.HideOlderThan },
                     { "sharedontwitter", user.SharedOnTwitter },
-                    { "sharedonfacebook", user.SharedOnFacebook }
+                    { "sharedonfacebook", user.SharedOnFacebook },
+                    { "isAdmin", user.IsAdmin }
                 });
         }
 
@@ -1408,6 +1411,12 @@ namespace Core.Data
         {
             var select = "select * from metadata where entity = '" + entity.EntityName + "' and entityid = " + entity.EntityId;
             return GetFromSelect(select).ToKeyValuePairs();
+        }
+
+        internal List<User> GetAllUsers()
+        {
+            var select = "select * from User";
+            return GetFromSelect(select).ToUsers();
         }
     }
 }

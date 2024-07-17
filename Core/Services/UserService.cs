@@ -219,5 +219,9 @@ namespace Core.Services
         {
             DataProvider.UpdateUserPassword(userId, salt, hash);
         }
+        public List<User> GetAllUsers()
+        {
+            return DataProvider.GetAllUsers();
+        }
     }
 }

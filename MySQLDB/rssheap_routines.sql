@@ -16,14 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping events for database 'rss_com_db'
+-- Dumping events for database 'rssheap'
 --
 
 --
--- Dumping routines for database 'rss_com_db'
+-- Dumping routines for database 'rssheap'
 --
 /*!50003 DROP PROCEDURE IF EXISTS `DeleteArticle` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -33,7 +33,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `DeleteArticle`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteArticle`(
 	in idParam int
 )
 BEGIN
@@ -49,9 +49,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `DeleteFavoriteArticle` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -61,7 +61,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `DeleteFavoriteArticle`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteFavoriteArticle`(
 	in userIdParam int,
 	in articleIdParam int
 )
@@ -78,7 +78,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `DeleteOldArticles` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -89,7 +89,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `DeleteOldArticles`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteOldArticles`(
 	
 )
 BEGIN
@@ -111,7 +111,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetArticleActivitiesByUserIds` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -121,7 +121,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetArticleActivitiesByUserIds`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetArticleActivitiesByUserIds`(
 	in userIdsParam longtext
 )
 BEGIN
@@ -135,9 +135,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetArticleById` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -147,7 +147,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetArticleById`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetArticleById`(
 	in idParam int
 )
 BEGIN
@@ -158,7 +158,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetArticleByName` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -169,7 +169,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetArticleByName`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetArticleByName`(
 	in nameParam text,
     in urlParam text,
     in publishedParam datetime
@@ -183,7 +183,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetArticles` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -193,7 +193,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetArticles`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetArticles`()
 BEGIN
 	select * from Article;
 END ;;
@@ -202,7 +202,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetArticlesByFeedId` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -213,7 +213,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetArticlesByFeedId`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetArticlesByFeedId`(
 	in feedIdParam int
 )
 BEGIN
@@ -226,7 +226,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetFeedById` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -236,7 +236,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetFeedById`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetFeedById`(
 	in idParam int
 )
 BEGIN
@@ -247,9 +247,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetFeedByNameAndUrl` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -259,7 +259,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetFeedByNameAndUrl`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetFeedByNameAndUrl`(
 	in nameParam longtext,
 	in urlRawParam longtext,
 	in urlParam longtext
@@ -273,9 +273,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetFeeds` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -285,7 +285,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetFeeds`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetFeeds`()
 BEGIN
 	select * from Feed;
 END ;;
@@ -294,9 +294,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetFeedsByIds` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -306,7 +306,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetFeedsByIds`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetFeedsByIds`(
 	in idsParam longtext
 )
 BEGIN
@@ -320,9 +320,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetTags` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -332,7 +332,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetTags`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetTags`()
 BEGIN
     select * from Tag where Active = 1;
 END ;;
@@ -341,9 +341,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetUserById` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -353,7 +353,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetUserById`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetUserById`(
 	in idParam int
 )
 BEGIN
@@ -364,9 +364,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `GetUserByUserNameAndPassword` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -376,7 +376,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `GetUserByUserNameAndPassword`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetUserByUserNameAndPassword`(
 	in userNameParam longtext,
 	in passwordParam longtext
 )
@@ -388,9 +388,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `IncreaseArticleCommentsCount` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -400,7 +400,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `IncreaseArticleCommentsCount`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IncreaseArticleCommentsCount`(
 	in idParam int
 )
 BEGIN
@@ -412,9 +412,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `IncreaseFeedFollowers` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -424,7 +424,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `IncreaseFeedFollowers`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IncreaseFeedFollowers`(
 	in idParam int
 )
 BEGIN
@@ -435,7 +435,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertArticle` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -446,7 +446,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertArticle`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertArticle`(
 	feedIdParam int,
 	nameParam longtext,
 	bodyParam longtext,
@@ -469,7 +469,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertArticleActivity` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -479,7 +479,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertArticleActivity`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertArticleActivity`(
 	in userIdParam int,
 	in userNameParam longtext,
 	in followingUserIdParam int,
@@ -510,7 +510,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertArticleTag` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -521,7 +521,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertArticleTag`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertArticleTag`(
 	in articleIdParam int,
 	in articlePublishedParam datetime,
 	in tagIdParam int,
@@ -543,7 +543,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertArticleVote` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -553,7 +553,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertArticleVote`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertArticleVote`(
 	in userIdParam int,
 	in articleIdParam longtext,
 	in votesParam int
@@ -575,9 +575,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertFavoriteArticle` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -587,7 +587,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertFavoriteArticle`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertFavoriteArticle`(
 	in userIdParam longtext,
 	in articleIdParam longtext
 )
@@ -604,9 +604,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertFeed` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -616,7 +616,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertFeed`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertFeed`(
 	in urlParam longtext,
 	in nameParam longtext,
 	in descriptionParam longtext,
@@ -636,9 +636,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertLog` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -648,7 +648,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertLog`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertLog`(
 	in dateParam datetime,
 	in errorParam longtext,
 	in sourceParam longtext
@@ -662,9 +662,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertTag` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -674,7 +674,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertTag`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertTag`(
 	in nameParam longtext
 )
 BEGIN
@@ -686,7 +686,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertUser` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -697,7 +697,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertUser`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertUser`(
 	in userNameParam longtext,
 	in saltParam blob,
 	in passwordParam blob,
@@ -720,7 +720,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `InsertUserFeed` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -730,7 +730,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `InsertUserFeed`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertUserFeed`(
 	in feedidParam int,
 	in useridParam int,
 	in submitedParam int,
@@ -748,9 +748,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `SearchFeeds` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -760,7 +760,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `SearchFeeds`(in queryParam longtext)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SearchFeeds`(in queryParam longtext)
 BEGIN
 -- 	set @queryParam='%%';
 	-- SELECT @queryParam;
@@ -789,7 +789,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateArticle` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -800,7 +800,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateArticle`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateArticle`(
 	in idParam int,
 	in nameParam longtext,
 	in bodyParam longtext,
@@ -837,7 +837,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateArticleAsRead`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateArticleAsRead`(
 	in useridParam int,
 	in articleidParam int
 )
@@ -853,7 +853,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateArticleTag` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -863,7 +863,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateArticleTag`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateArticleTag`(
 	in articleidParam int,
 	in tagidParam int,
 	in approvedParam bit,
@@ -882,7 +882,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateFeed` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -893,7 +893,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateFeed`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateFeed`(
 	in idParam int,
 	in nameParam longtext,
 	in descriptionParam longtext,
@@ -930,7 +930,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateTag`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateTag`(
 	in idParam int,
 	in activeParam int,
 	in nameParam varchar(45),
@@ -954,7 +954,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateTagArticleCount` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -964,7 +964,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateTagArticleCount`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateTagArticleCount`(
 	in tagIdParam int
 )
 BEGIN
@@ -977,7 +977,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateUser` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -988,7 +988,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateUser`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateUser`(
 	in idParam int,
 	in emailParam longtext,
 	in firstNameParam longtext,
@@ -1026,7 +1026,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateUserFeed` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -1036,7 +1036,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateUserFeed`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateUserFeed`(
 	in idParam int,
 	in feedidParam int,
 	in useridParam int,
@@ -1057,9 +1057,9 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `UpdateUserReadEntries` */;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -1069,7 +1069,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8 COLLATE utf8_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `UpdateUserReadEntries`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateUserReadEntries`(
 	in idParam int,
 	in userIdParam int,
 	in feedIdParam int,
@@ -1086,7 +1086,7 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
+ALTER DATABASE `rssheap` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 DROP PROCEDURE IF EXISTS `_deleteDuplicateArticles` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1097,7 +1097,7 @@ ALTER DATABASE `rss_com_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `_deleteDuplicateArticles`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `_deleteDuplicateArticles`()
 BEGIN
 	create temporary table tmpTable (id int);
 	insert  tmpTable
@@ -1138,7 +1138,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `_DeleteFeed`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `_DeleteFeed`(
 	in feedIdParam int
 )
 BEGIN
@@ -1167,16 +1167,17 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`rssheap`@`%` PROCEDURE `_DeleteUser`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `_DeleteUser`(
 	in userIdParam int
 )
 BEGIN
+delete from Payment where UserId = userIdParam;
 delete from Newsletter where UserId = userIdParam;
 delete from UserArticleVote where UserId = userIdParam;
 delete from UserArticleIgnored where UserId = userIdParam;
 delete from UserFavoriteArticle where UserId = userIdParam;
 delete from UserFeed where UserId = userIdParam;
-delete from UserFeed_backup where UserId = userIdParam;
+/*delete from UserFeed_backup where UserId = userIdParam;*/
 delete from UserFeedFolder where UserId = userIdParam;
 delete from UserFolder where UserId = userIdParam;
 delete from UserFeedIgnored where UserId = userIdParam;
