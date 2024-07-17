@@ -1,0 +1,41 @@
+﻿@model CardVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = (ViewContext.Controller as MvcWeb.Controllers._BaseController).CurrentUser;
+}
+
+@section seo
+{
+    <title>PRO - Upgrade</title>
+}
+
+<section id="page-title">
+    <div class="container clearfix">
+        <h1>@(Model.isPro ? "Already PRO" : "Your payment was successful") </h1>
+    </div>
+</section>
+<section id="content" style="margin-bottom: 0px;">
+    <div class="content-wrap">
+        <div class="container clearfix">
+            Hi @Model.User.UserName,
+            @{
+                string message = Model.isPro ?
+                    string.Format("You are already PRO User until <b>{0} {1}.</b>",
+                        Model.Payment.Date.AddYears(1).ToLongDateString(),
+                        Model.Payment.Date.AddYears(1).ToShortTimeString()) :
+                    string.Format("Thank you for supporting rssheap. Your subscription is valid until <b>{0} {1}.</b>",
+                        Model.Payment.Date.AddYears(1).ToLongDateString(),
+                        Model.Payment.Date.AddYears(1).ToShortTimeString());
+            }
+            @Html.Raw(message)
+            <br />
+            @(!Model.isPro ? "You now have prioritized support among other things so feel free to contact us if you need anything." : "")
+            <br />
+            <br />
+            <br />
+            <a href="/" class="btn btn-danger">Continue</a>
+        </div>
+    </div>
+</section>

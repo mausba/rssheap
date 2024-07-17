@@ -1,0 +1,124 @@
+﻿@using Web.ViewModels;
+
+@model List<UserVM>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+    var user = (ViewContext.Controller as MvcWeb.Controllers._BaseController).CurrentUser;
+}
+
+@section seo
+{
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="card shadow border-0 mt-4">
+        <div class="card-header bg-secondary bg-black ml-0 py-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="text-white py-2">@ViewData["Title"]</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-4">
+            <div class="row pb-3">
+                <div class="col-5">
+                    @using (@Html.BeginForm("Index", "Users", FormMethod.Post))
+                    {
+                        <b>Search filters: </b>
+                        <br />
+                        <div class="form-check form-check-inline">
+                            @Html.RadioButton("option", "isAdmin", true, new { @class = "form-check-input" })
+                            <label class="form-check-label"> Admin </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            @Html.RadioButton("option", "isUser", true, new { @class = "form-check-input" })
+                            <label class="form-check-label"> User </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            @Html.RadioButton("option", "Username", true, new { @class = "form-check-input" })
+                            <label class="form-check-label"> Username </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            @Html.RadioButton("option", "FLName", true, new { @class = "form-check-input" })
+                            <label class="form-check-label"> FLName </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            @Html.RadioButton("option", "All", true, new { @class = "form-check-input" })
+                            <label class="form-check-label"> All </label>
+                        </div>
+                        <div>
+                            <div class="mt-2">
+                                @Html.TextBox("search", null, new { @class = "form-control d-inline-block", style = "width: 300px;", placeholder = "Search..." })
+                            </div>
+                            <div>
+                                <input type="submit" value="Search" class="btn btn-info  " />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6"></div>
+            </div>
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info clearfix">
+                    <span>The list is empty.</span>
+                </div>
+            }
+            else
+            {
+                <table class="table table-hover">
+                    <thead style="width:100%;">
+                        <tr>
+                            <th hidden></th>
+                            <th style="width:5%;">IsAdmin</th>
+                            <th style="width:20%;">Username</th>
+                            <th style="width:20%;">Email</th>
+                            <th style="width:15%;">First name</th>
+                            <th style="width:15%;">Last name</th>
+                            <th style="width:5%;">Created</th>
+                            <th style="width:7%;">Last seen</th>
+
+                            <th style="width:10%;text-align:center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th hidden>@item.Id</th>
+                                <td>@Html.Raw(item.IsAdmin == true ? "<button class='btn btn-success btn-sm disabled '>YES</button>" : "<button class='btn btn-danger btn-sm disabled'>NO</button>")</td>
+                                <td>@item.UserName</td>
+                                <td>@item.Email</td>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.Created.ToShortDateString()</td>
+                                <td>@item.LastSeen.ToShortDateString()</td>
+                                <td class="text-right" style="text-align:end">
+                                    <div class="d-flex justify-content-evenly">
+                                        <a href="@Url.Action("Edit", "Users", new { id = @item.Id })" class="btn btn-success btn-sm"><i class="bi bi-pencil-square"></i></a>
+                                        <button id="Delete" onclick="confirmDelete('@item.Id','@user.Id')" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+    <script src="~/js/users.js"></script>
+</body>
+</html>

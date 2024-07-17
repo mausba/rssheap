@@ -31,6 +31,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySQLDB", "MySQLDB", "{571DD516-B2F7-4F89-98E5-669D5597B58F}"
 	ProjectSection(SolutionItems) = preProject
 		MySQLDB\rssheap_routines.sql = MySQLDB\rssheap_routines.sql
+		README.txt = README.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6ED2D349-8C82-42DF-8548-A102176FDBE8}"

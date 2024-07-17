@@ -20,6 +20,9 @@
     <link rel="stylesheet" media="all" href="/assets/css/fonts/fonts.css" />
     <link rel="stylesheet" media="all" href="/assets/css/magnific-popup.css" />
 
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css
+" rel="stylesheet" />
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <!--[if lt IE 9]>
@@ -38,6 +41,9 @@
     <script type="text/javascript" src="/assets/js/jquery.hotkeys-0,8+.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.magnific-popup.min.js"></script>
     <script src="/js/js.cookie.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js
+"></script>
 
     <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -88,12 +94,16 @@
                 <div class="links">
                     <a class="submit-url" href="#test-modal"><i class="fa fa-globe"></i>Have a URL?</a>
                     <a id="all-tags" href="/tags"><i class="fa fa-tags"></i>Tags</a>
+                    @if (user.IsAdmin)
+                    {
+                        <a href="/Users/Index">Users</a>
+                    }
                 </div>
             </div>
             <div class="box al-right">
                 <div class="links">
                     <form action="/articles">
-                        <input id="q" type="text" name="q" placeholder="Search for articles" value="@Request["q"]" />
+                        <input id="q" style="height:35px;" type="text" name="q" placeholder="Search for articles" value="@Request["q"]" />
                         <input type="submit" style="display: none;" />
                     </form>
                     <span title="@user.FirstName" style="font-size: 12px;">
@@ -145,7 +155,9 @@
 
     </div>
 
-    @RenderBody()
+    <main class="container mt-4">
+        @RenderBody()
+    </main>
     @Html.Partial("_Footer", new ViewDataDictionary { { "cssClass", "clearfix footer" } })
 
     <div id="test-modal" class="mfp-hide white-popup">
@@ -281,15 +293,12 @@
         var google_conversion_color = "ffffff";
         var google_conversion_label = "b1Z9CJ22vWwQxN_r2wM";
         var google_remarketing_only = false;
-                        /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        /* ]]> */
     </script>
     <noscript>
         <div style="display:inline;">
             <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/997912516/?label=b1Z9CJ22vWwQxN_r2wM&amp;guid=ON&amp;script=0" />
         </div>
     </noscript>
-
 </body>
 </html>
