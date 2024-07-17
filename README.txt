@@ -10,5 +10,5 @@
 ###########################################################################################################
 Add your API keys in Web.config for testing
 
-<add key="StripePublishableKey" value="pk_test_51Pc5uRB2uN1f0r7OV4NUGS2TbcHSd2bUijhtC3GTWC41mMt4jrdGJtK5N5qLNLjWegF7pzxeWHASjOeId9QlhFCb00yEZksJdi" />
-<add key="StripeSecretKey" value="sk_test_51Pc5uRB2uN1f0r7OxUgLjRJom0cLpiua7yKTubJGGM4nfEbRlJEgH69yQXzSH6jv61W9hMrwjubNsUWvLxIrgE2800ft4kAM0V" />
+<add key="StripePublishableKey" value="YOUR KEY" />
+<add key="StripeSecretKey" value="YOUR KEY" />

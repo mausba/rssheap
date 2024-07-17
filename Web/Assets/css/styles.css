@@ -1107,11 +1107,11 @@ li.folder {
     border-top: 5px solid rgba(0,0,0,0.2);
 }
 
-    #footer.dark, .dark #footer {
-        background-color: #333;
-        color: #CCC;
-        border-top-color: rgba(0,0,0,0.2);
-    }
+#footer.dark, .dark #footer {
+    background-color: #333;
+    color: #CCC;
+    border-top-color: rgba(0,0,0,0.2);
+}
 
 #copyrights {
     padding: 40px 0;

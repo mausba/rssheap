@@ -56,7 +56,7 @@
     @if (user != null)
     {
         @Html.Script(
-                                        @<script type="text/javascript">
+            @<script type="text/javascript">
                 twttr.ready(function (twttr) {
                     twttr.events.bind('tweet', function (event) {
                         if (event.type = "tweet") {
@@ -66,11 +66,11 @@
                         }
                     });
                 });
-                                        </script>
-);
+            </script>
+        );
 
         @Html.Script(
-                                        @<script type="text/javascript">
+            @<script type="text/javascript">
                 twttr.ready(function (twttr) {
                     // bind to the tweet event
                     twttr.events.bind('tweet', function (event) {
@@ -81,31 +81,31 @@
                         }
                     });
                 });
-                                        </script>
-);
+            </script>
+        );
 
         @Html.Script(
-                                        @<script>
-                                             window.fbAsyncInit = function () {
-                                                 FB.init({
-                                                     appId: '685201244886528',
-                                                     xfbml: true,
-                                                     version: 'v2.0'
-                                                 });
-                                             };
+            @<script>
+                 window.fbAsyncInit = function () {
+                     FB.init({
+                         appId: '685201244886528',
+                         xfbml: true,
+                         version: 'v2.0'
+                     });
+                 };
 
-                                             (function (d, s, id) {
-                                                 var js, fjs = d.getElementsByTagName(s)[0];
-                                                 if (d.getElementById(id)) { return; }
-                                                 js = d.createElement(s); js.id = id;
-                                                 js.src = "//connect.facebook.net/en_US/sdk.js";
-                                                 fjs.parentNode.insertBefore(js, fjs);
-                                             }(document, 'script', 'facebook-jssdk'));
-                                        </script>
-);
+                 (function (d, s, id) {
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) { return; }
+                     js = d.createElement(s); js.id = id;
+                     js.src = "//connect.facebook.net/en_US/sdk.js";
+                     fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
+            </script>
+        );
 
         @Html.Script(
-                                        @<script type="text/javascript">
+            @<script type="text/javascript">
                 $(document).ready(function () {
                     $("#facebook").click(function (e) {
                         e.preventDefault();
@@ -124,8 +124,8 @@
                         });
                     });
                 });
-                                        </script>
-);
+            </script>
+        );
     }
 }
 
